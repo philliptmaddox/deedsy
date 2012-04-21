@@ -36,11 +36,22 @@ class AppController extends Controller {
 		'Session',
 		'Auth' => array(
 			'loginRedirect' => array('controller' => 'deeds', 'action' => 'index'),
-			'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+			'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home'),
+			'authenticate' => array(
+				'Form' => array( 
+					'fields' => array('username' => 'email')
+				)
+			)
 		)
 	);
 	
 	public function beforeFilter() {
-		$this->Auth->allow('index', 'view');
+		$this->Auth->allow('index', 'view','add');
+	}
+	
+	public function isAuthorized($user) {
+		//to add the concept of admin users, check the role of the user here
+		//default to deny	
+		return false;
 	}
 }

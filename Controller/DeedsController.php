@@ -21,4 +21,18 @@ class DeedsController extends AppController {
             }	
 		}
 	}
+	
+	public function isAuthorized($user) {
+		if (in_array($this->action, array('add','edit','delete','view'))) {
+			return true;
+		}
+		
+		/*if (in_array($this->action, array('edit', 'delete'))) {
+			$deedId = $this->request->params['pass'][0];
+			if($this->Deed->isOwnedBy($postId,$user['id'])) {
+				return true;
+			}
+		}*/
+		return parent::isAuthorized($user);
+	}
 }

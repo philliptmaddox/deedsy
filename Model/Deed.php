@@ -31,4 +31,8 @@ class Deed extends AppModel {
 			)		
 		)
 	);
+	
+	public function isOwnedBy($deed, $user) {
+		return $this->field('id', array('id' => $deed, 'creator_user_id' => $user)) === $deed;
+	}
 }

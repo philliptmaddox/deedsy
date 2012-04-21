@@ -5,6 +5,7 @@
     <tr>
         <th>Id</th>
         <th>Name</th>
+        <th>Description</th>
         <th>Value</th>
         <th>Created</th>
     </tr>
@@ -15,11 +16,11 @@
     <tr>
         <td><?php echo $deed['Deed']['id']; ?></td>
         <td>
-            <?php echo $this->Html->link($deed['Deed']['email'],
+            <?php echo $this->Html->link($deed['Deed']['name'],
 array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?>
         </td>
-        <td><?php echo $deed['Deed']['first_name']; ?></td>
-        <td><?php echo $deed['Deed']['last_name']; ?></td>
+        <td><?php echo $deed['Deed']['description']; ?></td>
+         <td><?php echo $deed['Deed']['value']; ?></td>
         <td><?php echo $deed['Deed']['created']; ?></td>
     </tr>
     <?php endforeach; ?>

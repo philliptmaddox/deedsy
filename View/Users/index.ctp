@@ -8,6 +8,7 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Created</th>
+        <th>Actions</th>
     </tr>
 
     <!-- Here is where we loop through our $users array, printing out user info -->
@@ -22,6 +23,14 @@ array('controller' => 'users', 'action' => 'view', $user['User']['id'])); ?>
         <td><?php echo $user['User']['first_name']; ?></td>
         <td><?php echo $user['User']['last_name']; ?></td>
         <td><?php echo $user['User']['created']; ?></td>
+        <td>
+        	 <?php echo $this->Form->postLink(
+                'Delete',
+                array('action' => 'delete', $user['User']['id']),
+                array('confirm' => 'Are you sure?'));
+            ?>
+            <?php echo $this->Html->link('Edit', array('action' => 'edit', $user['User']['id']));?>
+        </td>
     </tr>
     <?php endforeach; ?>
 
