@@ -32,7 +32,11 @@
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
 /**
+<<<<<<< HEAD
+ * Load all plugin routes.  See the CakePlugin documentation on
+=======
  * Load all plugin routes.  See the CakePlugin documentation on 
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
  * how to customize the loading of plugin routes.
  */
 	CakePlugin::routes();

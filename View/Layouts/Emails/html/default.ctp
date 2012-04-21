@@ -11,16 +11,28 @@
  *
  * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
+<<<<<<< HEAD
+ * @package       app.View.Layouts.Email.html
+=======
  * @package       Cake.View.Layouts.Emails.html
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<<<<<<< HEAD
+
+=======
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 <html>
 <head>
 	<title><?php echo $title_for_layout;?></title>
 </head>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 <body>
 	<?php echo $content_for_layout;?>
 

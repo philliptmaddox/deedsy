@@ -48,7 +48,12 @@
  * on a per-table basis with the Model::$tablePrefix property.
  *
  * schema =>
+<<<<<<< HEAD
+ * For Postgres/Sqlserver specifies which schema you would like to use the tables in. Postgres defaults to 'public'.  For Sqlserver, it defaults to empty and use
+ * the connected user's default schema (typically 'dbo').
+=======
  * For Postgres specifies which schema you would like to use the tables in. Postgres defaults to 'public'.
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
  *
  * encoding =>
  * For MySQL, Postgres specifies the character encoding to use when connecting to the

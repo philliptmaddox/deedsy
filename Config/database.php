@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<?php
+class DATABASE_CONFIG {
+
+	public $default = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		'login' => 'deedsy',
+		'password' => 'D33dsy',
+		'database' => 'flash_deedsy',
+	);
+}
+=======
 <?php
 /**
  * This is core configuration file.
@@ -81,3 +95,4 @@ class DATABASE_CONFIG {
 		//'encoding' => 'utf8',
 	);
 }
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f

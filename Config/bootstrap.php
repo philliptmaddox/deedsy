@@ -2,7 +2,11 @@
 /**
  * This file is loaded automatically by the app/webroot/index.php file after core.php
  *
+<<<<<<< HEAD
+ * This file should load/create any application wide configuration settings, such as
+=======
  * This file should load/create any application wide configuration settings, such as 
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
  * Caching, Logging, loading additional configuration files.
  *
  * You should also use this file to include any files that provide global functions/constants
@@ -23,6 +27,9 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+<<<<<<< HEAD
+// Setup a 'default' cache configuration for use in the application.
+=======
 /**
  * Cache Engine Configuration
  * Default settings provided below
@@ -83,6 +90,7 @@
  *		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
  *	));
  */
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 Cache::config('default', array('engine' => 'File'));
 
 /**

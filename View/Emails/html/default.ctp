@@ -11,7 +11,11 @@
  *
  * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
+<<<<<<< HEAD
+ * @package       app.View.Emails.html
+=======
  * @package       Cake.View.Emails.html
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
@@ -20,6 +24,10 @@
 $content = explode("\n", $content);
 
 foreach ($content as $line):
+<<<<<<< HEAD
+	echo '<p> ' . $line . '</p>';
+=======
 	echo '<p> ' . $line . "</p>\n";
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 endforeach;
 ?>

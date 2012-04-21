@@ -11,7 +11,11 @@
  *
  * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
+<<<<<<< HEAD
+ * @package       app.View.Layouts
+=======
  * @package       Cake.View.Layouts
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
@@ -23,7 +27,11 @@
 <title><?php echo $page_title; ?></title>
 
 <?php if (Configure::read('debug') == 0) { ?>
+<<<<<<< HEAD
+<meta http-equiv="Refresh" content="<?php echo $pause?>;url=<?php echo $url?>"/>
+=======
 <meta http-equiv="Refresh" content="<?php echo $pause; ?>;url=<?php echo $url; ?>"/>
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 <?php } ?>
 <style><!--
 P { text-align:center; font:bold 1.1em sans-serif }
@@ -32,6 +40,10 @@ A:HOVER { text-decoration: underline; color:#44E }
 --></style>
 </head>
 <body>
+<<<<<<< HEAD
+<p><a href="<?php echo $url?>"><?php echo $message?></a></p>
+=======
 <p><a href="<?php echo $url; ?>"><?php echo $message; ?></a></p>
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 </body>
 </html>

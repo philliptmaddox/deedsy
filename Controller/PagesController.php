@@ -19,8 +19,11 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+<<<<<<< HEAD
+=======
 App::uses('AppController', 'Controller');
 
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 /**
  * Static content controller
  *
@@ -32,6 +35,8 @@ App::uses('AppController', 'Controller');
 class PagesController extends AppController {
 
 /**
+<<<<<<< HEAD
+=======
  * Controller name
  *
  * @var string
@@ -39,11 +44,16 @@ class PagesController extends AppController {
 	public $name = 'Pages';
 
 /**
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
  * Default helper
  *
  * @var array
  */
+<<<<<<< HEAD
+	public $helpers = array('Html');
+=======
 	public $helpers = array('Html', 'Session');
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 
 /**
  * This controller does not use a model
@@ -56,7 +66,10 @@ class PagesController extends AppController {
  * Displays a view
  *
  * @param mixed What page to display
+<<<<<<< HEAD
+=======
  * @return void
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
  */
 	public function display() {
 		$path = func_get_args();
@@ -65,7 +78,11 @@ class PagesController extends AppController {
 		if (!$count) {
 			$this->redirect('/');
 		}
+<<<<<<< HEAD
+		$page = $subpage = $title = null;
+=======
 		$page = $subpage = $title_for_layout = null;
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 
 		if (!empty($path[0])) {
 			$page = $path[0];
@@ -74,9 +91,19 @@ class PagesController extends AppController {
 			$subpage = $path[1];
 		}
 		if (!empty($path[$count - 1])) {
+<<<<<<< HEAD
+			$title = Inflector::humanize($path[$count - 1]);
+		}
+		$this->set(compact('page', 'subpage'));
+		$this->set('title_for_layout', $title);
+		$this->render(implode('/', $path));
+	}
+
+=======
 			$title_for_layout = Inflector::humanize($path[$count - 1]);
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
 	}
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 }

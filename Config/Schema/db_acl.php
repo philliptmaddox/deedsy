@@ -39,6 +39,15 @@ class DbAclSchema extends CakeSchema {
 	}
 
 	public $acos = array(
+<<<<<<< HEAD
+			'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
+			'parent_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
+			'model' => array('type' => 'string', 'null' => true),
+			'foreign_key' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
+			'alias' => array('type' => 'string', 'null' => true),
+			'lft' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
+			'rght' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
+=======
 			'id' => array('type'=>'integer', 'null' => false, 'default' => NULL, 'length' => 10, 'key' => 'primary'),
 			'parent_id' => array('type'=>'integer', 'null' => true, 'default' => NULL, 'length' => 10),
 			'model' => array('type'=>'string', 'null' => true),
@@ -46,10 +55,20 @@ class DbAclSchema extends CakeSchema {
 			'alias' => array('type'=>'string', 'null' => true),
 			'lft' => array('type'=>'integer', 'null' => true, 'default' => NULL, 'length' => 10),
 			'rght' => array('type'=>'integer', 'null' => true, 'default' => NULL, 'length' => 10),
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 			'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1))
 		);
 
 	public $aros = array(
+<<<<<<< HEAD
+			'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
+			'parent_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
+			'model' => array('type' => 'string', 'null' => true),
+			'foreign_key' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
+			'alias' => array('type' => 'string', 'null' => true),
+			'lft' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
+			'rght' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10),
+=======
 			'id' => array('type'=>'integer', 'null' => false, 'default' => NULL, 'length' => 10, 'key' => 'primary'),
 			'parent_id' => array('type'=>'integer', 'null' => true, 'default' => NULL, 'length' => 10),
 			'model' => array('type'=>'string', 'null' => true),
@@ -57,10 +76,20 @@ class DbAclSchema extends CakeSchema {
 			'alias' => array('type'=>'string', 'null' => true),
 			'lft' => array('type'=>'integer', 'null' => true, 'default' => NULL, 'length' => 10),
 			'rght' => array('type'=>'integer', 'null' => true, 'default' => NULL, 'length' => 10),
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 			'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1))
 		);
 
 	public $aros_acos = array(
+<<<<<<< HEAD
+			'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
+			'aro_id' => array('type' => 'integer', 'null' => false, 'length' => 10, 'key' => 'index'),
+			'aco_id' => array('type' => 'integer', 'null' => false, 'length' => 10),
+			'_create' => array('type' => 'string', 'null' => false, 'default' => '0', 'length' => 2),
+			'_read' => array('type' => 'string', 'null' => false, 'default' => '0', 'length' => 2),
+			'_update' => array('type' => 'string', 'null' => false, 'default' => '0', 'length' => 2),
+			'_delete' => array('type' => 'string', 'null' => false, 'default' => '0', 'length' => 2),
+=======
 			'id' => array('type'=>'integer', 'null' => false, 'default' => NULL, 'length' => 10, 'key' => 'primary'),
 			'aro_id' => array('type'=>'integer', 'null' => false, 'length' => 10, 'key' => 'index'),
 			'aco_id' => array('type'=>'integer', 'null' => false, 'length' => 10),
@@ -68,6 +97,7 @@ class DbAclSchema extends CakeSchema {
 			'_read' => array('type'=>'string', 'null' => false, 'default' => '0', 'length' => 2),
 			'_update' => array('type'=>'string', 'null' => false, 'default' => '0', 'length' => 2),
 			'_delete' => array('type'=>'string', 'null' => false, 'default' => '0', 'length' => 2),
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 			'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'ARO_ACO_KEY' => array('column' => array('aro_id', 'aco_id'), 'unique' => 1))
 		);
 

@@ -19,7 +19,10 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+<<<<<<< HEAD
+=======
 
+>>>>>>> 389c27c68f134006ca5d9db88c9f1372694f777f
 App::uses('Helper', 'View');
 
 /**
