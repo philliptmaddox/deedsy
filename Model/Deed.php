@@ -1,14 +1,15 @@
 <?php
 class Deed extends AppModel {
-	public $belongsTo = array(
-		'UserCreator' => array(
+	var $name = 'Deed';
+	var $belongsTo = array(
+		'DeedCreator' => array(
 			'className' => 'User',
 			'foreignKey' => 'creator_user_id'	
 		),
-		'UserActor' => array(
+		'DeedDoer' => array(
 			'className' => 'User',
 			'foreignKey' => 'actor_user_id'
-		) 
+		)
 	);
 	
 	public $validate = array (

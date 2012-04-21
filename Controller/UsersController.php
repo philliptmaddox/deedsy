@@ -21,6 +21,14 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Invalid user'));
 		}
 		$this->set('user', $this->User->read(null, $id));
+		$createdDeeds = $this->User->CreatedDeed->find('all',
+			array(
+				'conditions' => array(
+					'creator_user_id' => $id
+				)
+			)
+		);
+		$this->set('createdDeeds', $createdDeeds);
 	}
 	
 	public function add() {

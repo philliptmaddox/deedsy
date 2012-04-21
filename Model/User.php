@@ -3,11 +3,11 @@ App::uses('AuthComponent', 'Controller/Component');
 class User extends AppModel {
 	public $name = 'User';
 	public $hasMany  = array(
-			'creatorDeeds' => array(
+			'CreatedDeed' => array(
 			'className' => 'Deed',
 			'foreignKey' => 'creator_user_id'
 		),
-			'actorDeeds' => array(
+			'ClaimedDeed' => array(
 			'className' => 'Deed',
 			'foreignKey' => 'actor_user_id'
 		)
