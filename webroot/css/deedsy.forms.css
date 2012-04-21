@@ -4,9 +4,9 @@ input, textarea, .uneditable-input {
 
 label {
 	float: left;
-	line-height: 40px;
 	margin-right: 10px;
 	text-align: right;
+	margin-top: 12px;
 }
 
 legend {
@@ -46,8 +46,10 @@ legend {
 
 /* Deeds Add Form */
 .deeds.form{
-	width: 800px;
+	width: 622px;
 	background-color: #FFF2A6;
+	padding: 20px;
+	margin: 0;
 }
 
 .deeds.form label {
@@ -58,7 +60,7 @@ legend {
 	margin-left:130px;
 }
 
-.users.form .btn-primary{
+.deeds.form .btn-primary{
 	font-size: 24px;
 	padding: 10px;
 }
