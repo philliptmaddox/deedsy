@@ -1,0 +1,64 @@
+input, textarea, .uneditable-input {
+	padding: 10px;
+}
+
+label {
+	float: left;
+	line-height: 40px;
+	margin-right: 10px;
+	text-align: right;
+}
+
+legend {
+	border-bottom: none;
+}
+
+.btn-primary {
+	background-color: #0096ff;
+	background-image: -moz-linear-gradient(top, #e0f4ff, #0096ff);
+	background-image: -ms-linear-gradient(top, #e0f4ff, #0096ff);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e0f4ff), to(#0096ff));
+	background-image: -webkit-linear-gradient(top, #e0f4ff, #0096ff);
+	background-image: -o-linear-gradient(top, #e0f4ff, #0096ff);
+	background-image: linear-gradient(top, #e0f4ff, #0096ff);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0f4ff', endColorstr='#0096ff', GradientType=0);
+	border: 1px solid #CCC;
+	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+/* User Add Form */
+.users.form label {
+	width: 120px;
+}
+
+.users.form .submit {
+	margin-left:130px;
+}
+
+.users.form .btn-primary{
+	font-size: 30px;
+	padding: 10px;
+	width:200px;
+	height:85px;
+}
+
+
+/* Deeds Add Form */
+.deeds.form{
+	width: 800px;
+	background-color: #FFF2A6;
+}
+
+.deeds.form label {
+	width: 120px;
+}
+
+.deeds.form .submit {
+	margin-left:130px;
+}
+
+.users.form .btn-primary{
+	font-size: 24px;
+	padding: 10px;
+}
