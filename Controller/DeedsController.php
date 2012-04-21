@@ -13,6 +13,7 @@ class DeedsController extends AppController {
 	
 	public function add() {
 		if ($this->request->is('post')) {
+			 $this->request->data['Deed']['creator_user_id'] = $this->Auth->user('id');
 			if ($this->Deed->save($this->request->data)) {
                 $this->Session->setFlash('Deed has been created.');
                 $this->redirect(array('action' => 'index'));
@@ -23,7 +24,7 @@ class DeedsController extends AppController {
 	}
 	
 	public function isAuthorized($user) {
-		if (in_array($this->action, array('add','edit','delete','view'))) {
+		if (in_array($this->action, array('view','index'))) {
 			return true;
 		}
 		
