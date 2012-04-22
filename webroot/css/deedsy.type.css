@@ -15,6 +15,11 @@ h3 {
 	color: #414141;
 }
 
+h4 {
+	font: 18px "Snippet", Helvetica, sans-serif;
+	color: #414141; 
+}
+
 /* Navigation */
 
 .nav li a {
