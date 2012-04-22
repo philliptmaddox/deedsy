@@ -19,7 +19,7 @@
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" style="background:none;">
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300italic,300' rel='stylesheet' type='text/css'>
@@ -33,60 +33,27 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 		//echo $this->Html->css('cake.generic')
 		echo $this->Html->css('bootstrap.min');
-
 		echo $this->Html->script('libs/jquery-1.7.2.min.js');
-		echo $this->Html->script('libs/jquery.colorbox-min.js');
 		echo $this->Html->script('cakebootstrap.js');
-
-		echo $this->Html->script('deedsy.core.js');
-
 		echo $this->Html->css('deedsy.layout');
 		echo $this->Html->css('deedsy.type');
-		echo $this->Html->css('deedsy.colorbox');
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
 </head>
-<body>
-	
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="/">
-					<img src="/img/logo_animated.gif">
-				</a>
-				<div class="nav-collapse">
-					<ul class="nav">
-						<li class="active"><a href="/what">What is a do good engine?</a></li>
-						<li><a href="/faq">FAQs</a></li>
-						<li><a href="/about">About</a></li>
-						<li><a href="/contact">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container content">
-		
+<body style="background:none;">
 		<!--<div id="content">-->
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
 		<!--</div>
 		-->
+		<!--
 		<div class="footer row">
-			<hr />
-			<div class="social row span3">
-				<a href="#" alt="Deedsy on Facebook"><div class="fb"></div></a>
-				<a href="#" alt="Deedsy on Twitter"><div class="twitter"></div></a>
-				<p>Follow Us On<br />Twitter &amp; Facebook</p>
-			</div>
-			<div id="foottext" class="row span4">
-				<p>&copy; All Rights Reserved Deedsy</p>
-			</div>
+			©All Right Reserved Deedsy
 		</div>
-	</div>
+		-->
 	<!-- <?php echo $this->element('sql_dump'); ?> -->
 </body>
 </html>

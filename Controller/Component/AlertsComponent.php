@@ -46,6 +46,16 @@ class AlertsComponent extends Component {
 			->send("Thanks for joining our online community of good will.");
     }
 	
+	public function sendShareEmail($to, $deed) {
+        App::uses('CakeEmail', 'Network/Email');
+		
+		$email = new CakeEmail();
+		$email->from(array('no-reply@codeandcountry.com' => 'Deedsy Alert'))
+			->to($to)
+			->subject("A Friend in Need is a Friend Indeed")
+			->send("This is some deed info: \nName: ".$deed['Deed']['name']." \nDesc: ".$deed['Deed']['description']);
+    }
+	
 	public function sendDoubleOptIn($query) {
         //Maybe V2.0
     }
