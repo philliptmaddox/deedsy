@@ -9,6 +9,7 @@
 	.deedDescription {
 		border: 1px solid #d1d1d1;
 		box-shadow: 3px;
+		min-height: 175px;
 	}
 	.deedDescription h2 {
 		background-color: #640663;
@@ -16,13 +17,17 @@
 		padding: 20px;
 	}
 	.deedDescription p {
-		padding: 20px;	
+		padding: 20px;
 	}
 	.deedValue {
 		float: right;
 		width: 100px;
 		font-size: 32px;
-		color: #edba08;
+		color: #EDBA08;
+		background: transparent url(/img/halo1.png) no-repeat 15px 33px;
+		padding-bottom: 30px;
+		text-align: center;
+		margin-right: 12px;
 	}
 </style>
 
