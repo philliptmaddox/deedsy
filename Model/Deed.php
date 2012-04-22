@@ -12,6 +12,16 @@ class Deed extends AppModel {
 		)
 	);
 	
+	public $hasAndBelongsToMany = array(
+        'Tag' =>
+            array(
+                'className'              => 'Tag',
+                'joinTable'              => 'deeds_tags',
+                'foreignKey'             => 'deed_id',
+                'associationForeignKey'  => 'tag_id'
+            )
+    );
+	
 	public $validate = array (
 		'name' => array(
 			'required' => array(
