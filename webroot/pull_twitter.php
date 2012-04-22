@@ -8,7 +8,7 @@ $json = file_get_contents('http://search.twitter.com/search.json?q=from:phillipm
 $object = json_decode($json);
 
 // 127.0.0.1:3306
-$connection = mysql_connect("localhost","flash_deedsy","hacknashville");
+$connection = mysql_connect("127.0.0.1:8887","deedsy","hacknashville");
 if (!$connection)
 {
   die('Could not connect: ' . mysql_error());
@@ -44,7 +44,9 @@ function updateDeeds($items) {
 			
 			
 	    	// add deed
-			$query = "INSERT INTO flash_deedsy.deeds (name, description, value, creator_user_id, status_id, created, modified, tweet_id) VALUES ('from twitter', '" . $item->text . "', " . $deed_value . ", " . $deed_user . ", 1, now(), now(), " . $item->id . ");";
+			$query = "INSERT INTO flash_deedsy.deeds (name, description, value, creator_user_id, status_id, created, modified, tweet_id) VALUES ('" . $item->text . "', '" . $item->text . " (from <a href=\'http://twitter.com/" . $item->from_user . "\' target=\'_blank\'>" . $item->from_user . "</a>)', " . $deed_value . ", " . $deed_user . ", 1, now(), now(), " . $item->id . ");";
+			
+			echo $query;
 			
 			$result = mysql_query($query);
 			if (!$result) {

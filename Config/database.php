@@ -64,7 +64,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'deedsy',
-		'password' => 'D33dsy',
+		'password' => 'hacknashville',
 		'database' => 'flash_deedsy',
 		'prefix' => '',
 		//'encoding' => 'utf8',

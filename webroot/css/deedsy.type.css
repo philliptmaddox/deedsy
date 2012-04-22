@@ -3,6 +3,7 @@
 h1 {
 	font: 700 32px "Open Sans Condensed", Helvetica, sans-serif;
 	color: #640633;
+	letter-spacing: -.05em;
 }
 
 h2 {
@@ -20,6 +21,11 @@ h4 {
 	color: #414141; 
 }
 
+h5 {
+	font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #414141;
+}
+
 /* Navigation */
 
 .nav li a {
@@ -32,6 +38,28 @@ h4 {
 .nav a:hover {
 	text-decoration: underline !important;
 }
+
+/* Footer */
+.social p {
+	font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #640633;
+}	
+
+#foottext p {
+	font: 12px Myriad Pro, Myriad, Helvetica, Arial, Sans-serif;
+	color: #404242;
+}
+
+body {
+	font: 14px Myriad Pro, Myriad, Helvetica, Arial, Sans-serif !important;
+	color: #404242 !important;
+}
+
+#homecta h2 {
+	font-weight: 300;
+	color: #414141;
+}
+
 
 /* Logged in Header */
 #welcome {
@@ -52,21 +80,4 @@ h4 {
 
 .nav-links{
 	margin-top:-22px;
-}
-
-
-/* Footer */
-.social p {
-	font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;
-	color: #640633;
-}	
-
-#foottext p {
-	font: 12px Myriad Pro, Myriad, Helvetica, Arial, Sans-serif;
-	color: #404242;
-}
-
-body {
-	font: 14px Myriad Pro, Myriad, Helvetica, Arial, Sans-serif !important;
-	color: #404242 !important;
 }

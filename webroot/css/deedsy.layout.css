@@ -7,7 +7,7 @@ html, body {
 }
 
 #page-body{
-	padding-bottom:100px;   /* Height of the footer */
+	padding-bottom: 250px;   /* Height of the footer */
 }
 
 .navbar-inner {
@@ -102,7 +102,15 @@ li.active a {
 	padding-top: 20px;
 }
 
+hr {
+	border-top: 1px solid #0096ff; 
+}
+/* Tables */
 
+table.table th {
+	background-color: #640663;
+	color: #fff;
+}
 
 
 

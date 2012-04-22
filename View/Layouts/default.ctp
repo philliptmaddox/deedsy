@@ -66,6 +66,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<li><a href="/faq">FAQs</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/contact">Contact</a></li>
+						<li class="login"><a href="/login">Log In</a></li>
 					</ul>
                     <?php } else { ?>
                     	<div class="nav-links"><a href="/dashboard">dashboard</a> | <a href="/users/edit">profile</a></div>
