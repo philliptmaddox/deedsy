@@ -8,7 +8,7 @@ $json = file_get_contents('http://search.twitter.com/search.json?q=from:phillipm
 $object = json_decode($json);
 
 // 127.0.0.1:3306
-$connection = mysql_connect("localhost","flash_deedsy","hacknashville");
+$connection = mysql_connect("127.0.0.1:8887","deedsy","hacknashville");
 if (!$connection)
 {
   die('Could not connect: ' . mysql_error());

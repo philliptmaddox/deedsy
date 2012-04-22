@@ -3,6 +3,7 @@
 h1 {
 	font: 700 32px "Open Sans Condensed", Helvetica, sans-serif;
 	color: #640633;
+	letter-spacing: -.05em;
 }
 
 h2 {
@@ -18,6 +19,11 @@ h3 {
 h4 {
 	font: 18px "Snippet", Helvetica, sans-serif;
 	color: #414141; 
+}
+
+h5 {
+	font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #414141;
 }
 
 /* Navigation */
@@ -47,4 +53,31 @@ h4 {
 body {
 	font: 14px Myriad Pro, Myriad, Helvetica, Arial, Sans-serif !important;
 	color: #404242 !important;
+}
+
+#homecta h2 {
+	font-weight: 300;
+	color: #414141;
+}
+
+
+/* Logged in Header */
+#welcome {
+	font: 35px "Snippet", Helvetica, sans-serif;
+	color: #fff !Important;
+}
+
+.nav-collapse .h-label {
+	font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #fff;
+	margin-left: 40px;
+}
+
+.nav-collapse .label-number {
+	font: 700 35px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #edba08;
+}
+
+.nav-links{
+	margin-top:-22px;
 }
