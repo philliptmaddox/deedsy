@@ -1,6 +1,9 @@
 <!-- File: /app/View/Users/add.ctp -->
 <?php $this->Html->css('deedsy.forms', null, array('inline' => false));?>
-<div class="users form">	
+
+<div class="row">
+	<div class="span12">
+<div class="users form span12">	
 <?php echo $this->Form->create('User');?>
 <fieldset>
 <legend><?php echo __('Add User');?></legend>	
@@ -13,4 +16,6 @@ echo $this->Form->input('password_confirm', array('label' => 'Confirm Password',
 echo $this->Form->end('Let\'s Go');
 ?>
 </fieldset>
+</div>
+	</div>
 </div>

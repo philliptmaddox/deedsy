@@ -59,8 +59,11 @@ class DeedsController extends AppController {
 	}
 	
 	public function claimDeed($id = null) {
+		$this->User->id = $this->Auth->user('id');
 		$this->Deed->id = $id;
-		debug($this->Deed, true);
+		$this->Deed->set('actor_user_id', $this->User->id);
+		$this->Deed->save();
+		$this->redirect(array('controller' => 'dashboard', 'action' => 'index'));
 	}	
 	
 	public function isAuthorized($user) {
