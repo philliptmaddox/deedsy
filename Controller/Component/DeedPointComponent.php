@@ -2,6 +2,7 @@
 # /app/Controller/Component/AlertsComponent.php
 
 class DeedPointComponent extends Component {
+	var $uses = array('User', 'Deed');
 	
     public function transferDeedPoints($from_id, $to_id, $number) {
 		$success = false;
@@ -32,6 +33,37 @@ class DeedPointComponent extends Component {
 		
 		return $success;
     }
+	
+	public function chargeDeedPoints($user_id, $number) {
+		$success = false;
+		
+		$this->User->id = $id;
+		
+		$balance = $this->User->field(balance);
+		
+		if($balance > $number){
+			$this->User->set('balance', ($balance - $number));
+			if(!$this->User->save()){
+				$success = false;
+			}
+		}
+		
+		return $success;
+	}
+	
+	public function creditDeedPoints($user_id, $number) {
+		$success = false;
+		
+		$balance = $user['User']['balance'];
+		if($balance > $number){
+			$user.set('balance', ($balance + $number));
+			if(!$user->save()){
+				$success = false;
+			}
+		}
+		
+		return $success;
+	}
 }
 
 ?>
