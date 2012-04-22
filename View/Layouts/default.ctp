@@ -65,12 +65,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<li><a href="/faq">FAQs</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/contact">Contact</a></li>
+						<li class="login"><a href="/login">Log In</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-    <div is="page-body">
+    <div id="page-body">
 	<div class="container content">
 		
 		<!--<div id="content">-->
