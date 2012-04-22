@@ -1,6 +1,7 @@
 <?php
 class DeedsController extends AppController {
-     
+    var $uses = array('User', 'Deed');
+	 
     public $helpers = array('Html', 'Form');
 	
     public function index() {
