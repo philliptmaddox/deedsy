@@ -15,88 +15,80 @@
 		<li><a href="#created"><h3>Created Deeds</h3></a></li>
 	</ul>
 	<div id="everyone">
-		<table>
-		    <tr>
-		        <th>Date Posted</th>
-		        <th>Deed Title</th>
-		        <th>Tags</th>
-		        <th>Deed Creator</th>
-		        <th>Points Given</th>
-		    </tr>
-		    <?php foreach ($unclaimedDeeds as $deed): ?>
+		<table class="table table-striped">
+			<thead>
 			    <tr>
-			        <td>
-			            <?php echo $this->Html->link($deed['Deed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?>
-			        </td>
-			        <td><?php echo $deed['Deed']['description']; ?></td>
-			         <td><?php echo $deed['Deed']['value']; ?></td>
-			         <td>
-			         	<?php echo $this->Form->postLink(
-			                'claim',
-			                array('controller'=>'deeds','action' => 'claimdeed', $deed['Deed']['id']),
-			                array('confirm' => 'Are you sure?'));
-		            	?>
-		            	<?php echo $this->Html->link("view", array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?>
-			         </td>
-			        <td><?php echo $deed['Deed']['created']; ?></td>
-			  </tr>
-		    <?php endforeach; ?>
+			        <th>Date Posted</th>
+			        <th>Deed Title</th>
+			        <th>Deed Creator</th>
+			        <th>Points Given</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <?php foreach ($unclaimedDeeds as $deed): ?>
+				    <tr>
+				        <td><?php echo $deed['Deed']['created']; ?></td>
+				        <td><?php echo $this->Html->link($deed['Deed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?></td>
+				         <td><?php echo $deed['DeedCreator']['first_name'] .' '.$deed['DeedCreator']['last_name']; ?></td>
+				         <td><?php echo $deed['Deed']['value']; ?></td>
+				  </tr>
+			    <?php endforeach; ?>
+			</tbody>
 		</table>
 	</div>	
 	<div id="accepted">
-		<table>
-		    <tr>
-		        <th>Date Posted</th>
-		        <th>Deed Title</th>
-		        <th>Tags</th>
-		        <th>Deed Creator</th>
-		        <th>Status</th>
-		        <th>Points Earned</th>
-		    </tr>
-		    <?php foreach ($createdDeeds as $deed): ?>
+		<table class="table table-striped">
+			<thead>
 			    <tr>
-			        <td>
-			            <?php echo $this->Html->link($deed['CreatedDeed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['CreatedDeed']['id'])); ?>
-			        </td>
-			        <td><?php echo $deed['CreatedDeed']['description']; ?></td>
-			         <td><?php echo $deed['CreatedDeed']['value']; ?></td>
-			         <td>
-			        	<?php echo $this->Form->postLink(
-			                'delete',
-			                array('controller'=>'deeds','action' => 'delete', $deed['CreatedDeed']['id']),
-			                array('confirm' => 'Are you sure?'));
-		            	?>
-		            	<?php echo $this->Html->link("view", array('controller' => 'deeds', 'action' => 'view', $deed['CreatedDeed']['id'])); ?>
-		          		<?php echo $this->Html->link("edit", array('controller' => 'deeds', 'action' => 'edit', $deed['CreatedDeed']['id'])); ?>
-			         </td>
-			        <td><?php echo $deed['CreatedDeed']['created']; ?></td>
-			  </tr>
-		    <?php endforeach; ?>
+			        <th>Date Posted</th>
+			        <th>Deed Title</th>
+			        <th>Deed Creator</th>
+			        <th>Status</th>
+			        <th>Points Earned</th>
+			    </tr>
+		    </thead>
+		    <tbody>
+			    <?php foreach ($createdDeeds as $deed): ?>
+			    	<?php debug($deed, true); ?>
+				    <tr>
+				        <td><?php echo $deed['CreatedDeed']['created']; ?></td>
+				        <td>
+				            <?php echo $this->Html->link($deed['CreatedDeed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['CreatedDeed']['id'])); ?>
+				        </td>
+				        <td><?php echo $deed['DeedCreator']['first_name'] .' '.$deed['DeedCreator']['last_name']; ?></td>
+				         <td><?php echo $deed['CreatedDeed']['value']; ?></td>
+				  </tr>
+			    <?php endforeach; ?>
+		    </tbody>
 		</table>
 	</div>
 	<div id="created">	
-		<table>
-		    <tr>
-		        <th>Date Posted</th>
-		        <th>Deed Title</th>
-		        <th>Tags</th>
-		        <th>Do Gooder</th>
-		        <th>Status</th>
-		        <th>Points Given</th>
-		    </tr>
-		    <?php foreach ($claimedDeeds as $deed): ?>
+		<table class="table table-striped">
+			<thead>
 			    <tr>
-			        <td>
-			            <?php echo $this->Html->link($deed['ClaimedDeed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['ClaimedDeed']['id'])); ?>
-			        </td>
-			        <td><?php echo $deed['ClaimedDeed']['description']; ?></td>
-			         <td><?php echo $deed['ClaimedDeed']['value']; ?></td>
-			         <td>
-		            	<?php echo $this->Html->link("view", array('controller' => 'deeds', 'action' => 'view', $deed['ClaimedDeed']['id'])); ?>
-			         </td>
-			        <td><?php echo $deed['ClaimedDeed']['created']; ?></td>
-			  </tr>
-		    <?php endforeach; ?>
+			        <th>Date Posted</th>
+			        <th>Deed Title</th>
+			        <th>Tags</th>
+			        <th>Do Gooder</th>
+			        <th>Status</th>
+			        <th>Points Given</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <?php foreach ($claimedDeeds as $deed): ?>
+				    <tr>
+				        <td>
+				            <?php echo $this->Html->link($deed['ClaimedDeed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['ClaimedDeed']['id'])); ?>
+				        </td>
+				        <td><?php echo $deed['ClaimedDeed']['description']; ?></td>
+				         <td><?php echo $deed['ClaimedDeed']['value']; ?></td>
+				         <td>
+			            	<?php echo $this->Html->link("view", array('controller' => 'deeds', 'action' => 'view', $deed['ClaimedDeed']['id'])); ?>
+				         </td>
+				        <td><?php echo $deed['ClaimedDeed']['created']; ?></td>
+				  </tr>
+			    <?php endforeach; ?>
+			</tbody>
 		</table>
 	</div>	
 </div> <!-- END #tabs -->
