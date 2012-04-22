@@ -1,7 +1,25 @@
-<!-- File: /app/View/Users/view.ctp -->
+<!-- File: /app/View/Deeds/review.ctp -->
+<div>
+	<h1>Deed Preview</h1>
+    <p>Congratulations! Below is a preview of your deed. Click "Share it" to spread the word about your Deed.</p>
+</div>
+<a href="/deeds/edit/<?=$deed['Deed']['id']?>">edit</a> | <a href="/deeds/delete/<?=$deed['Deed']['id']?>">delete</a>
 
-<h1><?php echo ($deed['Deed']['name'])?></h1>
-<p><small>Name: <?php echo $deed['Deed']['description']?></small></p>
-<p><small>Value: <?php echo $deed['Deed']['value']?></small></p>
-<p><small>Creator: <?php echo $deed['Deed']['creator_user_id']?></small></p>
-<p><small>Created: <?php echo $deed['Deed']['created']?></small></p>
+<h1>Help, <?=$user_fname?> with his deed!</h1>
+<p>Your Friend, Ben needs a favor. Around here we call it a deed. Deedsy is a good deed engine. Earn points for doing good deeds. You can start here by accepting Ben's deed!</p>
+
+<div>
+    <div>
+        <h2><?=$deed['Deed']['name']?></h2>
+    </div>
+    <div>
+    	<p><?=$deed['Deed']['description']?></p>
+    </div>
+    <div>
+    	+<?=$deed['Deed']['value']?>
+    </div>
+    <div>
+    	<div>Earn +<?=$deed['Deed']['value']?> points</div>
+        <button type="submit">I'll do it</button>
+    </div>
+</div>
