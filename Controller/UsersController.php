@@ -36,7 +36,7 @@ class UsersController extends AppController {
 			if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash('User has been created.');
                 $this->Alerts->sendWelcomeEmail($this->User->field('email'), $this->User->field('first_name'));
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('controller' => 'dashboard' , 'action' => 'index'));
             } else {
                 $this->Session->setFlash('Unable to add user.');
             }	
