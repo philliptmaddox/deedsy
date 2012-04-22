@@ -60,12 +60,19 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<img src="/img/logo_animated.gif">
 				</a>
 				<div class="nav-collapse">
+                	<?php if(!$user){ ?>
 					<ul class="nav">
 						<li class="active"><a href="/what">What is a do good engine?</a></li>
 						<li><a href="/faq">FAQs</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/contact">Contact</a></li>
 					</ul>
+                    <?php } else { ?>
+                    <a href="/dashboard">dashboard</a> | <a href="/user/edit/<?=$user['User']['id']?>">profile</a>
+                    <span>What Up, <?=$user['User']['first_name']?>"</span>
+                    <span>Your Do Gooder Level: 1</span>
+                    <span>Deedsy Points:  <?=$user['User']['balance']?></span>
+                    <?php } ?>
 				</div>
 			</div>
 		</div>
