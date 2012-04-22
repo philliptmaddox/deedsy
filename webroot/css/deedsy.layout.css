@@ -12,6 +12,19 @@ html, body {
 
 .navbar-inner {
 	height: 130px;
+	background-color: #FFFFFF;
 	background-image: url('../img/header_bg.png');
 	background-repeat: repeat-x;
+}
+
+.navbar .brand {
+	padding-top: 0px;
+}
+
+#container {
+	padding-top: 140px;
+}
+
+#footer {
+	text-align: center;
 }
