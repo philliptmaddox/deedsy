@@ -48,8 +48,12 @@ class AppController extends Controller {
 	
 	public function beforeFilter() {
 		$this->Auth->allow('index', 'view');
-		$this->User->id = $this->Auth->user('id');
-		$this->set('user', $this->User);
+		if($this->Auth->loggedIn() && isset($this->User)){
+			//debug($this->Auth->user('id'), true);
+			$this->User->id = $this->Auth->user('id');
+			$this->set('user', $this->User->read());
+			//debug($this->User->read(), true);
+		}
 	}
 	
 	public function isAuthorized($user) {
