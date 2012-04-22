@@ -1,7 +1,6 @@
 <?php
 class DeedsController extends AppController {
-    var $uses = array('User', 'Deed');
-	 
+     
     public $helpers = array('Html', 'Form');
 	
     public function index() {
@@ -16,13 +15,43 @@ class DeedsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			 $this->request->data['Deed']['creator_user_id'] = $this->Auth->user('id');
-			if ($this->Deed->save($this->request->data)) {
+			 
+			 //gather tags
+			 $tags = explode(',', $this->request->data['Deed']['tags']);
+		 
+			 $new_data = $this->data;
+			 
+			 foreach($tags as $_tag) {
+				$_tag = strtolower(trim($_tag));
+				if ($_tag) {
+					$this->Deed->Tag->recursive = -1;
+					$tag = $this->Deed->Tag->findByName($_tag);
+					if (!$tag) {
+						$this->Deed->Tag->create();
+						$tag = $this->Deed->Tag->save(array('name'=>$_tag));
+						$tag['Tag']['id'] = $this->Deed->Tag->id;
+						if (!$tag) {
+							$this->_flash(__(sprintf('The Tag %s could not be saved.',$_tag), true),'success');
+						}
+					}
+					if ($tag) {
+						$new_data['Tag']['Tag'][$tag['Tag']['id']] = $tag['Tag']['id'];
+					}
+				}
+			}
+			 
+			if ($this->Deed->save($new_data)) {
                 $this->Session->setFlash('Deed has been created.');
                 $this->redirect(array('action' => 'index'));
             } else {
                 $this->Session->setFlash('Unable to add deed.');
             }	
 		}
+	}
+	
+	public function review($id = null) {
+		$this->Deed->id = $id;
+		$this->set('deed', $this->Deed->read());
 	}
 	
 	public function setStatus($id = null, $status) {
