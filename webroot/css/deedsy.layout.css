@@ -28,3 +28,14 @@ html, body {
 .footer {
 	text-align: center;
 }
+
+/* Phillip's Overrides */
+
+.nav-collapse {
+	margin: 50px 0 0 0;
+}
+
+li.active a {
+	background-color: transparent !important;
+	text-decoration: underline !important;
+}	
