@@ -36,4 +36,8 @@ class Deed extends AppModel {
 	public function isOwnedBy($deed, $user) {
 		return $this->field('id', array('id' => $deed, 'creator_user_id' => $user)) === $deed;
 	}
+	
+	public function isClaimedBy($deed, $user) {
+		return $this->field('id', array('id' => $deed, 'actor_user_id' => $user)) === $deed;
+	}
 }
