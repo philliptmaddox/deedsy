@@ -11,8 +11,13 @@ h2 {
 }
 
 h3 {
-	font: 300 24px "Open Sans Condensed", Helvetica, sans-serif;
+	font: 300 16px "Open Sans Condensed", Helvetica, sans-serif;
 	color: #414141;
+}
+
+h4 {
+	font: 18px "Snippet", Helvetica, sans-serif;
+	color: #414141; 
 }
 
 /* Navigation */
@@ -21,6 +26,8 @@ h3 {
 	font: 18px "Snippet", Helvetica, sans-serif;
 	color: #fff !Important;
 }
+
+#salut 
 
 .nav a:hover {
 	text-decoration: underline !important;

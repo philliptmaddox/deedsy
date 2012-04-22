@@ -36,6 +36,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 		echo $this->Html->script('libs/jquery-1.7.2.min.js');
 		echo $this->Html->script('libs/jquery.colorbox-min.js');
+		echo $this->Html->script('jquery-ui-1.8.19.custom.min.js');	
 		echo $this->Html->script('cakebootstrap.js');
 
 		echo $this->Html->script('deedsy.core.js');
@@ -43,6 +44,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->css('deedsy.layout');
 		echo $this->Html->css('deedsy.type');
 		echo $this->Html->css('deedsy.colorbox');
+		echo $this->Html->css('flick/jquery-ui-1.8.19.custom.css');
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -58,12 +60,19 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<img src="/img/logo_animated.gif">
 				</a>
 				<div class="nav-collapse">
+                	<?php if(!$user){ ?>
 					<ul class="nav">
 						<li class="active"><a href="/what">What is a do good engine?</a></li>
 						<li><a href="/faq">FAQs</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/contact">Contact</a></li>
 					</ul>
+                    <?php } else { ?>
+                    <a href="/dashboard">dashboard</a> | <a href="/user/edit/<?=$user['User']['id']?>">profile</a>
+                    <span>What Up, <?=$user['User']['first_name']?>"</span>
+                    <span>Your Do Gooder Level: 1</span>
+                    <span>Deedsy Points:  <?=$user['User']['balance']?></span>
+                    <?php } ?>
 				</div>
 			</div>
 		</div>
@@ -76,7 +85,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $this->fetch('content'); ?>
 		<!--</div>
 		-->
-		<div class="footer row">
+	</div>
+    </div>
+    <div id="page-footer">
+    	<div class="footer row">
 			<hr />
 			<div class="social row span3">
 				<a href="#" alt="Deedsy on Facebook"><div class="fb"></div></a>
@@ -87,10 +99,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<p>&copy; All Rights Reserved Deedsy</p>
 			</div>
 		</div>
-	</div>
-    </div>
-    <div id="page-footer">
-    	©All Right Reserved Deedsy
     </div>
     </div>
 	<!-- <?php echo $this->element('sql_dump'); ?> -->

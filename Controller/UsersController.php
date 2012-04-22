@@ -48,6 +48,9 @@ class UsersController extends AppController {
 		if (!$this->User->exists()) {
 			throw new NotFoundException(__('Invalid user'));
 		}
+		if (!$this->User->id != $this->Auth->user('id')){
+			throw new ForbiddenException(__('Not Authorized'));
+		}
 		if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved'));
@@ -61,13 +64,13 @@ class UsersController extends AppController {
         }
 	}
 	
-	public function delete($id = null) {
+/*	public function delete($id = null) {
         if (!$this->request->is('post')) {
             throw new MethodNotAllowedException();
         }
         $this->User->id = $id;
         if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundENotAuthorizedExceptionxception(__('Invalid user'));
         }
         if ($this->User->delete()) {
             $this->Session->setFlash(__('User deleted'));
@@ -76,7 +79,7 @@ class UsersController extends AppController {
         $this->Session->setFlash(__('User was not deleted'));
         $this->redirect(array('action' => 'index'));
     }
-	
+*/
 	public function login() {
 		if ($this->request->is('post')) {
 			if($this->Auth->login()) {

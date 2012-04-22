@@ -21,6 +21,7 @@
  */
 
 App::uses('Controller', 'Controller');
+App::uses('User', 'Model');
 
 /**
  * Application Controller
@@ -47,6 +48,8 @@ class AppController extends Controller {
 	
 	public function beforeFilter() {
 		$this->Auth->allow('index', 'view');
+		$this->User->id = $this->Auth->user('id');
+		$this->set('user', $this->User);
 	}
 	
 	public function isAuthorized($user) {

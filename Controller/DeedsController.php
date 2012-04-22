@@ -5,7 +5,8 @@ class DeedsController extends AppController {
     public $helpers = array('Html', 'Form');
 	
 	public $components = array(
-		'Alerts'
+		'Alerts',
+		'DeedPoint'
     );
 	
     public function index() {
@@ -47,6 +48,8 @@ class DeedsController extends AppController {
 			}
 			 
 			if ($this->Deed->save($new_data)) {
+				$this->User->id = $this->Auth->user('id');
+				$this->chargeDeedPoints($this->User->id, $this->Deed->field('value'));
                 $this->Session->setFlash('Deed has been created.');
                 $this->redirect(array('action' => 'index'));
             } else {
@@ -149,6 +152,9 @@ class DeedsController extends AppController {
 			$this->Deed->id = $id;
 			$this->Deed->set('status_id', 3);
 			$this->Deed->save();
+
+			$this->chargeDeedPoints($this->Deed->field('actor_user_id'), $this->Deed->field('value'));
+			
 			$this->redirect(array('controller' => 'dashboard', 'action' => 'index'));
 		}
 	}
@@ -170,5 +176,43 @@ class DeedsController extends AppController {
 	public function getLoggedInUser() {
 		$this->User->id = $this->Auth->user('id');
 		return $this->User;
+	}
+	
+	
+	// internal functions
+	private function chargeDeedPoints($user_id, $number) {
+		$success = false;
+		
+		$this->User->id = $user_id;
+		$this->User->read();
+		
+		$balance = $this->User->field('balance');
+		
+		if($balance > $number){
+			$this->User->set('balance', ($balance - $number));
+			if(!$this->User->save()){
+				$success = false;
+			}
+		}
+		
+		return $success;
+	}
+	
+	private function creditDeedPoints($user_id, $number) {
+		$success = false;
+		
+		$this->User->id = $user_id;
+		$this->User->read();
+		
+		$balance = $this->User->field('balance');
+		
+		if($balance > $number){
+			$this->User->set('balance', ($balance + $number));
+			if(!$this->User->save()){
+				$success = false;
+			}
+		}
+		
+		return $success;
 	}
 }
