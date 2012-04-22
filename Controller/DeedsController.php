@@ -4,6 +4,10 @@ class DeedsController extends AppController {
 	 
     public $helpers = array('Html', 'Form');
 	
+	public $components = array(
+		'Alerts'
+    );
+	
     public function index() {
         $this->set('deeds', $this->Deed->find('all'));
     }
@@ -53,6 +57,21 @@ class DeedsController extends AppController {
 	public function review($id = null) {
 		$this->User->id = $this->Auth->user('id');
 		$this->Deed->id = $id;
+		$this->set('deed', $this->Deed->read());
+		$this->set('user', $this->User->read());
+	}
+	
+	public function share($id = null) {
+		$this->Deed->id = $id;
+		
+		if ($this->request->is('post')) {
+			 $to = $this->request->data['Share']['email'];
+			 //debug($this->request->data, true);
+			 $this->Alerts->sendShareEmail($to, $this->Deed->read());
+		}
+		
+		$this->User->id = $this->Auth->user('id');
+		$this->layout = 'nostyle';
 		$this->set('deed', $this->Deed->read());
 		$this->set('user', $this->User->read());
 	}
