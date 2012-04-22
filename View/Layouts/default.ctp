@@ -21,6 +21,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300italic,300' rel='stylesheet' type='text/css'>
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		Deedsy:
@@ -34,6 +36,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->script('libs/jquery-1.7.2.min.js');
 		echo $this->Html->script('cakebootstrap.js');
 		echo $this->Html->css('deedsy.layout');
+		echo $this->Html->css('deedsy.type');
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -50,16 +53,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li><a href="#">What is a do good engine?</a></li>
-						<li class="active"><a href="#">FAQs</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li class="active"><a href="/what">What is a do good engine?</a></li>
+						<li><a href="/faq">FAQs</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-	
 	<div class="container content">
 		
 		<!--<div id="content">-->

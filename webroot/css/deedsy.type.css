@@ -1,0 +1,17 @@
+/* "H" Tags */
+
+h1 {
+	font: 700 32px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #640633;
+}
+
+/* Navigation */
+
+.nav li a {
+	font: 18px "Snippet", Helvetica, sans-serif;
+	color: #fff !Important;
+}
+
+.nav a:hover {
+	text-decoration: underline !important;
+}
