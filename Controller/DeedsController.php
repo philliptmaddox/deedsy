@@ -20,6 +20,7 @@ class DeedsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			 $this->request->data['Deed']['creator_user_id'] = $this->Auth->user('id');
+			$this->request->data['Deed']['status_id'] = 1;
 			 
 			 //gather tags
 			 $tags = explode(',', $this->request->data['Deed']['tags']);
@@ -53,6 +54,22 @@ class DeedsController extends AppController {
             }	
 		}
 	}
+
+	public function delete($id = null) {
+		if (!$this->request->is('post')) {
+            throw new MethodNotAllowedException();
+        }
+        $this->Deed->id = $id;
+        if (!$this->Deed->exists()) {
+            throw new NotFoundException(__('Invalid deed'));
+        }
+        if ($this->Deed->delete()) {
+            $this->Session->setFlash(__('Deed deleted'));
+            $this->redirect(array('controller'=>'dashboard','action' => 'index'));
+        }
+        $this->Session->setFlash(__('Deed was not deleted'));
+        $this->redirect(array('action' => 'index'));
+	}
 	
 	public function review($id = null) {
 		$this->User->id = $this->Auth->user('id');
@@ -76,17 +93,25 @@ class DeedsController extends AppController {
 		$this->set('user', $this->User->read());
 	}
 	
-	public function setStatus($id = null, $status) {
-		$this->Deed->id = $id;
+	public function claimDeed($id = null) {
+		if ($this->request->is('post')) {
+			$this->User->id = $this->Auth->user('id');
+			$this->Deed->id = $id;
+			$this->Deed->set('actor_user_id', $this->User->id);
+			$this->Deed->set('status_id', 2);
+			$this->Deed->save();
+			$this->redirect(array('controller' => 'dashboard', 'action' => 'index'));
+		}
 	}
 	
-	public function claimDeed($id = null) {
-		$this->User->id = $this->Auth->user('id');
-		$this->Deed->id = $id;
-		$this->Deed->set('actor_user_id', $this->User->id);
-		$this->Deed->save();
-		$this->redirect(array('controller' => 'dashboard', 'action' => 'index'));
-	}	
+	public function markCompleted($id = null) {
+		if ($this->request->is('post')) {
+			$this->Deed->id = $id;
+			$this->Deed->set('status_id', 3);
+			$this->Deed->save();
+			$this->redirect(array('controller' => 'dashboard', 'action' => 'index'));
+		}
+	}
 	
 	public function isAuthorized($user) {
 		if (in_array($this->action, array('view','index'))) {
@@ -100,5 +125,10 @@ class DeedsController extends AppController {
 			}
 		}
 		return parent::isAuthorized($user);
+	}
+	
+	public function getLoggedInUser() {
+		$this->User->id = $this->Auth->user('id');
+		return $this->User;
 	}
 }
