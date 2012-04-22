@@ -44,9 +44,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	?>
 </head>
 <body style="background:none;">
-	
-	<div class="container content">
-		
 		<!--<div id="content">-->
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
@@ -57,7 +54,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			©All Right Reserved Deedsy
 		</div>
 		-->
-	</div>
 	<!-- <?php echo $this->element('sql_dump'); ?> -->
 </body>
 </html>

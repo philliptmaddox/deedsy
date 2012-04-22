@@ -33,10 +33,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 		//echo $this->Html->css('cake.generic')
 		echo $this->Html->css('bootstrap.min');
+
 		echo $this->Html->script('libs/jquery-1.7.2.min.js');
+		echo $this->Html->script('libs/jquery.colorbox-min.js');
 		echo $this->Html->script('cakebootstrap.js');
+
+		echo $this->Html->script('deedsy.core.js');
+
 		echo $this->Html->css('deedsy.layout');
 		echo $this->Html->css('deedsy.type');
+		echo $this->Html->css('deedsy.colorbox');
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

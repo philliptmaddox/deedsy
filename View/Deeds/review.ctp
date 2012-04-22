@@ -2,7 +2,7 @@
 <div>
 	<h1>Deed Preview</h1>
     <p>Congratulations! Below is a preview of your deed. Click "Share it" to spread the word about your Deed.</p>
-    <a href="/deeds/share/<?=$deed['Deed']['id']?>">Share</a>
+    <a href="/deeds/share/<?=$deed['Deed']['id']?>" class="show-share">Share</a>
 </div>
 <a href="/deeds/edit/<?=$deed['Deed']['id']?>">edit</a> | <a href="/deeds/delete/<?=$deed['Deed']['id']?>">delete</a>
 
