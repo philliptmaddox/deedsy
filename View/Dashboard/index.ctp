@@ -8,6 +8,10 @@
 		$( "#tabs" ).tabs();
 	});
 </script>
+<div class="well">
+	<h1>Create a Deed.</h1>
+	<?php echo $this->Html->link("Create Deed", array('controller' => 'deeds', 'action' => 'add'), array("class" => "btn btn-large btn-primary")) ?>
+</div>
 <div id="tabs">
 	<ul>
 		<li><a href="#everyone"><h3>Everyone's Deeds</h3></a></li>
