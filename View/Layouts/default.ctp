@@ -85,7 +85,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $this->fetch('content'); ?>
 		<!--</div>
 		-->
-		<div class="footer row">
+	</div>
+    </div>
+    <div id="page-footer">
+    	<div class="footer row">
 			<hr />
 			<div class="social row span3">
 				<a href="#" alt="Deedsy on Facebook"><div class="fb"></div></a>
@@ -96,10 +99,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<p>&copy; All Rights Reserved Deedsy</p>
 			</div>
 		</div>
-	</div>
-    </div>
-    <div id="page-footer">
-    	©All Right Reserved Deedsy
     </div>
     </div>
 	<!-- <?php echo $this->element('sql_dump'); ?> -->

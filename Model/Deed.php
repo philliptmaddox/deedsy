@@ -9,6 +9,10 @@ class Deed extends AppModel {
 		'DeedDoer' => array(
 			'className' => 'User',
 			'foreignKey' => 'actor_user_id'
+		),
+		'Status' => array(
+			'className' => 'Status',
+			'foreignKey' => 'status_id'
 		)
 	);
 	
