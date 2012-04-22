@@ -43,12 +43,12 @@ class UsersController extends AppController {
 		}
 	}
 	
-	public function edit($id = null) {
-		$this->User->id = $id;
+	public function edit() {
+		$this->User->id = $this->Auth->user('id');
 		if (!$this->User->exists()) {
 			throw new NotFoundException(__('Invalid user'));
 		}
-		if (!$this->User->id != $this->Auth->user('id')){
+		if ($this->User->id != $this->Auth->user('id')){
 			throw new ForbiddenException(__('Not Authorized'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
@@ -59,7 +59,7 @@ class UsersController extends AppController {
                 $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
             }
         } else {
-            $this->request->data = $this->User->read(null, $id);
+            $this->request->data = $this->User->read();
             unset($this->request->data['User']['password']);
         }
 	}
