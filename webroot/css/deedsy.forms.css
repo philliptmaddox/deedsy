@@ -30,10 +30,12 @@ legend {
 /* User Add Form */
 .users.form label {
 	width: 120px;
+	text-align:left;
+	margin-top:5px;
 }
 
 .users.form .submit {
-	margin-left:130px;
+	margin-left:-6px;
 }
 
 .users.form .btn-primary{
