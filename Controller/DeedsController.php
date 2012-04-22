@@ -52,7 +52,6 @@ class DeedsController extends AppController {
 	
 	public function review($id = null) {
 		$this->User->id = $this->Auth->user('id');
-		debug($this->User->id, true);
 		$this->Deed->id = $id;
 		$this->set('deed', $this->Deed->read());
 		$this->set('user', $this->User->read());
