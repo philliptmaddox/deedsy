@@ -7,6 +7,7 @@
         <th>Name</th>
         <th>Description</th>
         <th>Value</th>
+        <th>Tags</th>
         <th>Created</th>
     </tr>
 
@@ -20,7 +21,16 @@
 array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?>
         </td>
         <td><?php echo $deed['Deed']['description']; ?></td>
-         <td><?php echo $deed['Deed']['value']; ?></td>
+        <td><?php echo $deed['Deed']['value']; ?></td>
+        <td>
+		<?php 
+			$tags = "";
+			foreach($deed['Tag'] as $tag){
+				$tags .= $tag['name'].", ";
+			}
+			echo substr($tags, 0, strlen($tags)-2);
+		?>
+        </td>
         <td><?php echo $deed['Deed']['created']; ?></td>
     </tr>
     <?php endforeach; ?>

@@ -9,6 +9,7 @@
         echo $this->Form->input('name', array('label' => 'Title:'));
         echo $this->Form->input('description', array('label' => 'Description:<br/><em>250 char limit</em>'));
         echo $this->Form->input('value', array('label' => 'Points you\'ll give:'));
+		echo $this->Form->input('tags', array('label' => 'Tags (comma sepated):'));
         echo $this->Form->end('Create Deed');
         ?>
     </fieldset>
