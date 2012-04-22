@@ -23,7 +23,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
+		Deedsy:
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -50,7 +50,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li class="active"><a href="/what"</a>What is a do good engine?</li>
+						<li class="active"><a href="/what">What is a do good engine?</a></li>
 						<li><a href="/faq">FAQs</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="/contact">Contact</a></li>
@@ -59,22 +59,18 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			</div>
 		</div>
 	</div>
-	
-	<div id="container">
-		<!--
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		-->
-		<div id="content" class="row, span12">
+	<div class="container content">
+		
+		<!--<div id="content">-->
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
-		</div>
-		
-		<div id="footer">
+		<!--</div>
+		-->
+		<!--
+		<div class="footer row">
 			©All Right Reserved Deedsy
 		</div>
-		
+		-->
 	</div>
 	<!-- <?php echo $this->element('sql_dump'); ?> -->
 </body>
