@@ -33,6 +33,28 @@ h4 {
 	text-decoration: underline !important;
 }
 
+/* Logged in Header */
+#welcome {
+	font: 35px "Snippet", Helvetica, sans-serif;
+	color: #fff !Important;
+}
+
+.nav-collapse .h-label {
+	font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #fff;
+	margin-left: 40px;
+}
+
+.nav-collapse .label-number {
+	font: 700 35px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #edba08;
+}
+
+.nav-links{
+	margin-top:-22px;
+}
+
+
 /* Footer */
 .social p {
 	font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;
