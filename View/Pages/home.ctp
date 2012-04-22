@@ -45,6 +45,6 @@
 			</tbody>
 		</table>
 		<img src="img/dogood-ribbon.png" alt="Do Some Good &amp; Pay it Forward"/>
-		<a href="users/users/add"><img src="img/joinnow.png" alt="Join Deedsy!"/></a>
+		<a href="/users/add"><img src="img/joinnow.png" alt="Join Deedsy!"/></a>
 	</div>
 </div>
