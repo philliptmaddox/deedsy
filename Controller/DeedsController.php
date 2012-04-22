@@ -50,8 +50,8 @@ class DeedsController extends AppController {
 			if ($this->Deed->save($new_data)) {
 				$this->User->id = $this->Auth->user('id');
 				$this->chargeDeedPoints($this->User->id, $this->Deed->field('value'));
-                $this->Session->setFlash('Deed has been created.');
-                $this->redirect(array('action' => 'index'));
+                $this->Session->setFlash('Deed has been created.', 'review_deed', array('deed' => $this->Deed->read()));
+                $this->redirect(array('action' => 'view', $this->Deed->id));
             } else {
                 $this->Session->setFlash('Unable to add deed.');
             }	
