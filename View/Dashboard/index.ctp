@@ -20,7 +20,11 @@
 	        <td><?php echo $deed['Deed']['description']; ?></td>
 	         <td><?php echo $deed['Deed']['value']; ?></td>
 	         <td>
-            	<?php echo $this->Html->link("claim", array('controller' => 'deeds', 'action' => 'claimdeed', $deed['Deed']['id'])); ?>
+	         	<?php echo $this->Form->postLink(
+	                'claim',
+	                array('controller'=>'deeds','action' => 'claimdeed', $deed['Deed']['id']),
+	                array('confirm' => 'Are you sure?'));
+            	?>
             	<?php echo $this->Html->link("view", array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?>
 	         </td>
 	        <td><?php echo $deed['Deed']['created']; ?></td>
@@ -46,7 +50,7 @@
 	         <td>
 	        	<?php echo $this->Form->postLink(
 	                'delete',
-	                array('action' => 'delete', $deed['CreatedDeed']['id']),
+	                array('controller'=>'deeds','action' => 'delete', $deed['CreatedDeed']['id']),
 	                array('confirm' => 'Are you sure?'));
             	?>
             	<?php echo $this->Html->link("view", array('controller' => 'deeds', 'action' => 'view', $deed['CreatedDeed']['id'])); ?>

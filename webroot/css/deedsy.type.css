@@ -5,6 +5,16 @@ h1 {
 	color: #640633;
 }
 
+h2 {
+	font: 700 24px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #640633;
+}
+
+h3 {
+	font: 300 24px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #414141;
+}
+
 /* Navigation */
 
 .nav li a {
@@ -14,4 +24,20 @@ h1 {
 
 .nav a:hover {
 	text-decoration: underline !important;
+}
+
+/* Footer */
+.social p {
+	font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;
+	color: #640633;
+}	
+
+#foottext p {
+	font: 12px Myriad Pro, Myriad, Helvetica, Arial, Sans-serif;
+	color: #404242;
+}
+
+body {
+	font: 14px Myriad Pro, Myriad, Helvetica, Arial, Sans-serif !important;
+	color: #404242 !important;
 }
