@@ -20,9 +20,9 @@
 		padding: 20px;
 	}
 	.deedValue {
+		font: 700 35px "Open Sans Condensed", Helvetica, sans-serif;
 		float: right;
 		width: 100px;
-		font-size: 32px;
 		color: #EDBA08;
 		background: transparent url(/img/halo1.png) no-repeat 15px 33px;
 		padding-bottom: 30px;
@@ -45,5 +45,6 @@
         							array('controller' => 'deeds','action' => 'claimdeed',$deed['Deed']['id']),
         							array('escape' => false , 'confirm' => 'are you sure?')); ?>
     	<div>Earn +<?=$deed['Deed']['value']?> points</div>
+<!--     	<img style="float: right; margin-top: -100px; z-index: 100; position: relative;" src="/img/large_kitty_noring.png" alt="huge kitty"/> -->
     </div>
 </div>

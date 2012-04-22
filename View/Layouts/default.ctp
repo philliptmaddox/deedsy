@@ -68,9 +68,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<li><a href="/contact">Contact</a></li>
 					</ul>
 					<div class="span3 login">
-						<span style="font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;"><img src="img/downarrow.png"/>&nbsp;&nbsp;Existing Do Gooders</span>
+						<span style="font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;"><img src="/img/downarrow.png"/>&nbsp;&nbsp;Existing Do Gooders</span>
 						<br />
-						<a href="users/login" alt="log in"><img src="img/login_button.png" alt="login button"/></a>
+						<a href="users/login" alt="log in"><img src="/img/login_button.png" alt="login button"/></a>
 					</div>
                     <?php } else { ?>
                     	<div class="nav-links"><a href="/dashboard">Dashboard</a> | <a href="/users/edit">Profile</a></div>
