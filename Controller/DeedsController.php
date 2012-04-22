@@ -1,5 +1,6 @@
 <?php
 class DeedsController extends AppController {
+    var 
     public $helpers = array('Html', 'Form');
 	
     public function index() {
@@ -23,17 +24,26 @@ class DeedsController extends AppController {
 		}
 	}
 	
+	public function setStatus($id = null, $status) {
+		$this->Deed->id = $id;
+	}
+	
+	public function claimDeed($id = null) {
+		$this->Deed->id = $id;
+		debug($this->Deed, true)
+	}	
+	
 	public function isAuthorized($user) {
 		if (in_array($this->action, array('view','index'))) {
 			return true;
 		}
 		
-		/*if (in_array($this->action, array('edit', 'delete'))) {
+		if (in_array($this->action, array('edit', 'delete'))) {
 			$deedId = $this->request->params['pass'][0];
-			if($this->Deed->isOwnedBy($postId,$user['id'])) {
+			if($this->Deed->isOwnedBy($deedId,$user['id'])) {
 				return true;
 			}
-		}*/
+		}
 		return parent::isAuthorized($user);
 	}
 }
