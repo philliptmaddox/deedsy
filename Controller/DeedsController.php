@@ -153,7 +153,7 @@ class DeedsController extends AppController {
 			$this->Deed->set('status_id', 3);
 			$this->Deed->save();
 
-			$this->chargeDeedPoints($this->Deed->field('actor_user_id'), $this->Deed->field('value'));
+			$this->creditDeedPoints($this->Deed->field('actor_user_id'), $this->Deed->field('value'));
 			
 			$this->redirect(array('controller' => 'dashboard', 'action' => 'index'));
 		}

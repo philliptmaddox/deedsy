@@ -81,7 +81,18 @@
 				            <?php echo $this->Html->link($deed['CreatedDeed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['CreatedDeed']['id'])); ?>
 				        </td>
 				        <td><?php echo $deed['DeedDoer']['first_name'] .' '. $deed['DeedDoer']['last_name']; ?></td>
-				        <td><?php echo $deed['Status']['name']; ?></td>
+				        <td>
+				        	<?php
+				        		if($deed['Status']['name']=='pending') {
+				        			echo $this->Form->postLink(
+        							$this->Html->image('mark_complete.png'), 
+        							array('controller' => 'deeds','action' => 'markcompleted',$deed['CreatedDeed']['id']),
+        							array('escape' => false , 'confirm' => 'are you sure?'));
+				        		} else {
+				        			echo $deed['Status']['name'];
+				        		}
+				        	?>
+		        		</td>
 						<td><?php echo $deed['CreatedDeed']['value']; ?></td>
 				  </tr>
 			    <?php endforeach; ?>
