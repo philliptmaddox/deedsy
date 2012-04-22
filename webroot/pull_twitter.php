@@ -44,7 +44,9 @@ function updateDeeds($items) {
 			
 			
 	    	// add deed
-			$query = "INSERT INTO flash_deedsy.deeds (name, description, value, creator_user_id, status_id, created, modified, tweet_id) VALUES ('from twitter', '" . $item->text . "', " . $deed_value . ", " . $deed_user . ", 1, now(), now(), " . $item->id . ");";
+			$query = "INSERT INTO flash_deedsy.deeds (name, description, value, creator_user_id, status_id, created, modified, tweet_id) VALUES ('" . $item->text . "', '" . $item->text . " (from <a href=\'http://twitter.com/" . $item->from_user . "\' target=\'_blank\'>" . $item->from_user . "</a>)', " . $deed_value . ", " . $deed_user . ", 1, now(), now(), " . $item->id . ");";
+			
+			echo $query;
 			
 			$result = mysql_query($query);
 			if (!$result) {
