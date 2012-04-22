@@ -20,6 +20,7 @@
  */
 
 App::uses('AppController', 'Controller');
+App::uses('User', 'Model');
 
 /**
  * Static content controller

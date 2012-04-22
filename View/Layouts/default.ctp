@@ -68,10 +68,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<li><a href="/contact">Contact</a></li>
 					</ul>
                     <?php } else { ?>
-                    <div class="nav-links"><a href="/dashboard">dashboard</a> | <a href="/users/edit">profile</a></div>
-                    <span id="welcome">What Up, <?=$user['User']['first_name']?></span>
-                    <span class="h-label">Your Do Gooder Level: <span class="label-number">1</span></span>
-                    <span class="h-label">Deedsy Points: <span class="label-number"><?=$user['User']['balance']?></span></span>
+                    	<div class="nav-links"><a href="/dashboard">dashboard</a> | <a href="/users/edit">profile</a></div>
+                    	<span id="welcome">What Up, <?=$user['User']['first_name']?></span>
+                    	<span class="h-label">Your Do Gooder Level: <span class="label-number">1</span></span>
+                    	<span class="h-label">Deedsy Points: <span class="label-number"><?=$user['User']['balance']?></span></span>
                     <?php } ?>
 				</div>
 			</div>
