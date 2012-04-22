@@ -63,7 +63,7 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'deedsy',
+		'login' => 'flash_deedsy',
 		'password' => 'hacknashville',
 		'database' => 'flash_deedsy',
 		'prefix' => '',
