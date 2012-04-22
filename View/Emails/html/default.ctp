@@ -16,6 +16,16 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<table width="550" border="0" cellpadding="0" cellspacing="0">
+			<thead width="550">
+				<th width="550"><img src="http://deedsy.codeandcountry.com/img/email_header.jpg" alt="email header" width="550" height="162"</th>
+			</thead>
+			<tbody>
 <?php
 $content = explode("\n", $content);
 
@@ -23,3 +33,14 @@ foreach ($content as $line):
 	echo '<p> ' . $line . "</p>\n";
 endforeach;
 ?>
+					<tr width="500">
+						<td border="0"><img src="http://deedsy.codeandcountry.com/img/1.jpg" alt="0"/></td>
+						<td border="0"><img src="http://deedsy.codeandcountry.com/img/2.jpg" alt="0"/></td>
+						<td border="0"><img src="http://deedsy.codeandcountry.com/img/3.jpg" alt="0"/></td>
+						<td border="0"><img src="http://deedsy.codeandcountry.com/img/4.jpg" alt="0"/></td>
+						<td border="0"><img src="http://deedsy.codeandcountry.com/img/5.jpg" alt="0"/></td>
+					</tr>	
+			</tbody>
+		</table>
+	</body>
+</html>
