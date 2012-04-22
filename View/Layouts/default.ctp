@@ -69,11 +69,17 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $this->fetch('content'); ?>
 		<!--</div>
 		-->
-		<!--
 		<div class="footer row">
-			©All Right Reserved Deedsy
+			<hr />
+			<div class="social row span3">
+				<a href="#" alt="Deedsy on Facebook"><div class="fb"></div></a>
+				<a href="#" alt="Deedsy on Twitter"><div class="twitter"></div></a>
+				<p>Follow Us On<br />Twitter &amp; Facebook</p>
+			</div>
+			<div id="foottext" class="row span4">
+				<p>&copy; All Rights Reserved Deedsy</p>
+			</div>
 		</div>
-		-->
 	</div>
 	<!-- <?php echo $this->element('sql_dump'); ?> -->
 </body>
