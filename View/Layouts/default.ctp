@@ -50,9 +50,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li class="active"><a href="#">FAQs</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li class="active"><a href="/what"</a>What is a do good engine?</li>
+						<li><a href="/faq">FAQs</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -65,7 +66,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 		</div>
 		-->
-		<div id="content">
+		<div id="content" class="row, span12">
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
 		</div>
