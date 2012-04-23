@@ -9,6 +9,9 @@ class AlertsComponent extends Component {
 		$email = new CakeEmail();
 		$email->from(array('no-reply@codeandcountry.com' => 'Deedsy Alert'))
 			->to($to)
+			->template('default', 'new-alert')
+    		->emailFormat('html')
+			->viewVars(array('owner' => $owner))
 			->subject("New Good Deed Opportunity - $name")
 			->send("A friend in need is a friend indeed and ".$user['User']['first_name']." could do with a favor")
 			->sender($user['User']['email'], $user['User']['first_name']." ".$user['User']['last_name']);
@@ -46,14 +49,18 @@ class AlertsComponent extends Component {
 			->send("Thanks for joining our online community of good will.");
     }
 	
-	public function sendShareEmail($to, $deed) {
+	public function sendShareEmail($to, $from, $deed) {
         App::uses('CakeEmail', 'Network/Email');
 		
 		$email = new CakeEmail();
+		$email = new CakeEmail();
 		$email->from(array('no-reply@codeandcountry.com' => 'Deedsy Alert'))
 			->to($to)
-			->subject("A Friend in Need is a Friend Indeed")
-			->send("This is some deed info: \nName: ".$deed['Deed']['name']." \nDesc: ".$deed['Deed']['description']);
+			->template('default', 'new-alert')
+    		->emailFormat('html')
+			->viewVars(array('owner' => $from))
+			->subject("New Good Deed Opportunity")
+			->send("A friend in need is a friend indeed and ".$from." could do with a favor");
     }
 	
 	public function sendDoubleOptIn($query) {

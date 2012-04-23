@@ -125,9 +125,11 @@ class DeedsController extends AppController {
 		$this->Deed->id = $id;
 		
 		if ($this->request->is('post')) {
+			 $this->User->id = $this->Auth->user('id');
 			 $to = $this->request->data['Share']['email'];
 			 //debug($this->request->data, true);
-			 $this->Alerts->sendShareEmail($to, $this->Deed->read());
+			 $this->Alerts->sendShareEmail($to, $this->User->field('first_name'), $this->Deed->read());
+			 $this->redirect(array('controller'=>'dashboard','action' => 'index'));
 		}
 		
 		$this->User->id = $this->Auth->user('id');
