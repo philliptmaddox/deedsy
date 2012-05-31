@@ -56,11 +56,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="/">
-					<img src="/img/logo_animated.gif">
-				</a>
-				<div class="nav-collapse">
                 	<?php if(!isset($user)){ ?>
+                	<a class="brand" href="/">
+					<img src="/img/logo_animated.gif">
+					</a>
+				<div class="nav-collapse">
 					<ul class="nav">
 						<li class="active"><a href="/what">What is a do good engine?</a></li>
 						<li><a href="/faq">FAQs</a></li>
@@ -73,8 +73,17 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<a href="/users/login" alt="log in"><img src="/img/login_button.png" alt="login button"/></a>
 					</div>
                     <?php } else { ?>
-                    	<div class="nav-links"><a href="/dashboard">Dashboard</a> | <a href="/users/edit">Profile</a></div>
-                    	<span id="welcome">What Up, <?=$user['User']['first_name']?></span>
+                    <a class="brand" href="/dashboard">
+					<img src="/img/logo_animated.gif">
+					</a>
+				<div class="nav-collapse">
+                    	<div class="nav-links"><a href="/dashboard">Dashboard</a> | <a href="/users/edit">Profile</a><span style="float: right;"><a href="/users/logout">Logout</a></span></div>
+                    	<span id="welcome">
+	                    	<?php $input = array("Hello, ", "Sup, ", "What up,", "Yo,", "Howdy,");
+	                    		$rand_keys = array_rand($input, 2);
+	                    		echo $input[$rand_keys[0]] . "\n"; ?>
+	                    		<?=$user['User']['first_name']?>!
+                    	</span>
                     	<span class="h-label">Your Do Gooder Level: <span class="label-number">1</span></span>
                     	<span class="h-label">Deedsy Points: <span class="label-number"><?=$user['User']['balance']?></span></span>
                     <?php } ?>
