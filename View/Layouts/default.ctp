@@ -92,27 +92,27 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 	</div>
     <div id="page-body">
-	<div class="container content">
-		
-		<!--<div id="content">-->
-			<?php echo $this->Session->flash(); ?>
-			<?php echo $this->fetch('content'); ?>
-		<!--</div>
-		-->
-	</div>
+		<div class="container content">
+			
+			<!--<div id="content">-->
+				<?php echo $this->Session->flash(); ?>
+				<?php echo $this->fetch('content'); ?>
+			<!--</div>
+			-->
+		</div>
     </div>
     <div id="page-footer">
     	<div class="footer row">
 			<hr />
-			<div class="social row span3">
-				<a href="#" alt="Deedsy on Facebook"><div class="fb"></div></a>
-				<a href="#" alt="Deedsy on Twitter"><div class="twitter"></div></a>
+			<div class="social span3">
+				<a href="http://www.facebook.com/gooddeedsy" target="_blank" alt="Deedsy on Facebook"><div class="fb"></div></a>
+				<a href="https://de.twitter.com/#!/JoinDeedsy" target="_blank" alt="Deedsy on Twitter"><div class="twitter"></div></a>
 				<p>Follow Us On<br />Twitter &amp; Facebook</p>
 			</div>
-			<div id="foottext" class="row span4">
+			<div id="foottext" class="span4">
 				<p>&copy; All Rights Reserved Deedsy</p>
 			</div>
-		</div>
+		</div> <!-- END ROW -->
     </div>
     </div>
 	<!-- <?php echo $this->element('sql_dump'); ?> -->
