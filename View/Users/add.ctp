@@ -1,16 +1,13 @@
 <!-- File: /app/View/Users/add.ctp -->
 <?php $this->Html->css('deedsy.forms', null, array('inline' => false));?>
 
-<div class="row span2">
-	<div class="banner"></div>
-</div>
-<div class="row span9">
-	<img src="/img/deedsyfavor.jpg" alt="Deedsy Points Example" style="float:left;"/>
-    <div class="span3" style="float:left;">
-        <div class="users form" style="float:left">	
+<div class="row span12">
+	<img src="/img/join_dude.jpg" alt="Join Deedsy Dude" style="float:left;"/>
+    <div class="span3" style="float:right;">
+        <div class="users form" style="float:right">
+        <img  style="margin-bottom: 20px;" src="/img/earn_25.jpg" alt="Earn 25 Deedsy Points"/>	
         <?php echo $this->Form->create('User');?>
         <fieldset>
-        <legend>Join Deedsy</legend>	
         <?php
         echo $this->Form->input('email', array('label' => 'Email'));
         echo $this->Form->input('first_name', array('label' => 'First Name'));
@@ -24,8 +21,6 @@
         </div>
 	</div>
 </div>
-	<img style="margin: -100px 0 0 744px" src="/img/kitty_noring.png" alt="Everyone Loves Cats!"/>
-
 <div class="row">
 	
 </div>

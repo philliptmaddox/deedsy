@@ -1,3 +1,5 @@
 <h1>About Deedsy</h1>
 <hr />
-<h3><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b> Phasellus dictum euismod aliquet. Donec at elit ut ligula aliquet hendrerit. Vivamus vitae tellus id felis commodo ornare. Cras pretium, nibh eu facilisis rhoncus, neque mi ullamcorper diam, nec consequat lacus felis at odio. Sed quis justo eget orci rhoncus sodales et ac erat.</h3>
+<h1><b>Deedsy is a good deed engine.<h1><h2>Do Good, earn points. Level up and earn the spot of top do gooder.</b></h2>
+<br /><h3><b>Mission</b></h3>
+<p>Deedsy exists to promote doing good and rewarding those who do. We believe in doing everything with the spirit of fun, innovation and sincerity.</p>
