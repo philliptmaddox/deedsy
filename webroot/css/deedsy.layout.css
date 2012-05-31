@@ -11,7 +11,7 @@ html, body {
 }
 
 .navbar-inner {
-	height: 145px;
+	height: 136px;
 	background-color: transparent;
 	background-image: url('../img/header_bg.png');
 	background-repeat: repeat-x;
