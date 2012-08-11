@@ -1,6 +1,8 @@
 <?php 
 class DeedsySchema extends CakeSchema {
 
+	public $file = 'schema_1.php';
+
 	public function before($event = array()) {
 		return true;
 	}
@@ -16,6 +18,7 @@ class DeedsySchema extends CakeSchema {
 		'creator_user_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'key' => 'index'),
 		'actor_user_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'key' => 'index'),
 		'status_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'expires' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'tweet_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 20),
