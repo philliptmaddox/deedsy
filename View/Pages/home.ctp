@@ -17,31 +17,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td><h5>45 min ago</h5</td>
-					<td><h5>Need a Lift to Bridgestone Center</h5</td>
-					<td><h5>15 pts</h5</td>
-				</tr>	
-				<tr>
-					<td><h5>45 min ago</h5</td>
-					<td><h5>Need a Lift to Bridgestone Center</h5</td>
-					<td><h5>15 pts</h5</td>
-				</tr>
-				<tr>
-					<td><h5>45 min ago</h5</td>
-					<td><h5>Need a Lift to Bridgestone Center</h5</td>
-					<td><h5>15 pts</h5</td>
-				</tr>
-				<tr>
-					<td><h5>45 min ago</h5</td>
-					<td><h5>Need a Lift to Bridgestone Center</h5</td>
-					<td><h5>15 pts</h5</td>
-				</tr>
-				<tr>
-					<td><h5>45 min ago</h5</td>
-					<td><h5>Need a Lift to Bridgestone Center</h5</td>
-					<td><h5>15 pts</h5</td>
-				</tr>
+				<?php foreach ($deeds as $deed): ?>
+					<tr>
+						<td><h5><?php echo $deed['Deed']['created']; ?></h5</td>
+						<td><h5><?php echo $this->Html->link($deed['Deed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?></h5></td>
+						<td><h5><?php echo $deed['Deed']['value']; ?> pts</h5</td>
+					</tr>	
+				<?php endforeach; ?>
 			</tbody>
 		</table>
 		<img src="img/dogood-ribbon.png" alt="Do Some Good &amp; Pay it Forward"/>

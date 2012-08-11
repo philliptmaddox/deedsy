@@ -51,8 +51,15 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Deed');
 
+	public function home() {
+        $this->set('deeds', $this->Deed->find('all', array(
+            'conditions' => array('Deed.status_id' => 1),
+            'order' => array('Deed.created DESC'),
+            'limit' => 5,
+        )));
+	}
 /**
  * Displays a view
  *
