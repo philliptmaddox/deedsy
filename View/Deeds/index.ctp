@@ -9,6 +9,7 @@
         <th>Value</th>
         <th>Tags</th>
         <th>Created</th>
+        <th>Expires</th>
     </tr>
 
     <!-- Here is where we loop through our $deeds array, printing out deed info -->
@@ -32,6 +33,7 @@ array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?>
 		?>
         </td>
         <td><?php echo $deed['Deed']['created']; ?></td>
+        <td><?php echo empty($deed['Deed']['expires']) ? 'never' : $deed['Deed']['expires']; ?></td>
     </tr>
     <?php endforeach; ?>
 
