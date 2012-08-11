@@ -47,10 +47,25 @@ class DeedsController extends AppController {
 				}
 			}
 			 
+			$this->User->id = $this->Auth->user('id');
+					$this->User->read();
+			$first_deed = $this->User->CreatedDeed->find('count', array(
+				'conditions' => array(
+					'creator_user_id' => $this->User->id
+				)
+			)) == 0;
 			if ($this->chargeDeedPoints($this->User->id, $this->request->data['Deed']['value'])) {
 			    if ($this->Deed->save($new_data)) {
-				    $this->User->id = $this->Auth->user('id');
+				if ($first_deed) {
+				    $this->Session->setFlash('+5 points for posting your first deed.', 'default', array());
+					$this->User->read();
+					
+					$balance = $this->User->field('balance');
+					$this->User->set('balance', ($balance + 5));
+					$this->User->save();
+				} else {
 				    $this->Session->setFlash('Deed has been created.', 'review_deed', array('deed' => $this->Deed->read()));
+				}
 				    $this->redirect(array('action' => 'view', $this->Deed->id));
 			    } else {
 				$this->Session->setFlash('Unable to add deed.');
