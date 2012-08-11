@@ -47,14 +47,17 @@ class DeedsController extends AppController {
 				}
 			}
 			 
-			if ($this->Deed->save($new_data)) {
-				$this->User->id = $this->Auth->user('id');
-				$this->chargeDeedPoints($this->User->id, $this->Deed->field('value'));
-                $this->Session->setFlash('Deed has been created.', 'review_deed', array('deed' => $this->Deed->read()));
-                $this->redirect(array('action' => 'view', $this->Deed->id));
-            } else {
-                $this->Session->setFlash('Unable to add deed.');
-            }	
+			if ($this->chargeDeedPoints($this->User->id, $this->request->data['Deed']['value'])) {
+			    if ($this->Deed->save($new_data)) {
+				    $this->User->id = $this->Auth->user('id');
+				    $this->Session->setFlash('Deed has been created.', 'review_deed', array('deed' => $this->Deed->read()));
+				    $this->redirect(array('action' => 'view', $this->Deed->id));
+			    } else {
+				$this->Session->setFlash('Unable to add deed.');
+			    }	
+			} else {
+				$this->Session->setFlash('Unable to add deed - you do not have enough deedsy points.');
+			}
 		}
 	}
 
@@ -190,11 +193,9 @@ class DeedsController extends AppController {
 		
 		$balance = $this->User->field('balance');
 		
-		if($balance > $number){
+		if($balance >= $number){
 			$this->User->set('balance', ($balance - $number));
-			if(!$this->User->save()){
-				$success = false;
-			}
+			$success = $this->User->save();
 		}
 		
 		return $success;
