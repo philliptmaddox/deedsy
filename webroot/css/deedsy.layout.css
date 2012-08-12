@@ -1,0 +1,127 @@
+html, body {
+	height: 100%;
+	min-height: 100%;
+	
+	/*padding-bottom: 155px;*/
+	margin-bottom: -155px;
+}
+
+#page-body{
+	padding-bottom: 250px;   /* Height of the footer */
+}
+
+.navbar-inner {
+	height: 136px;
+	background-color: transparent;
+	background-image: url('../img/header_bg.png');
+	background-repeat: repeat-x;
+	box-shadow: none;
+}
+
+.navbar .login{
+	float: right !important;
+	color: #fff;
+}
+
+.navbar .brand {
+	padding-top: 0px;
+}
+
+.navbar .container {
+	width: 940px;
+}
+
+.content {
+	/*padding-top: 140px;*/
+}
+
+.footer {
+	text-align: center;
+	width: 960px;
+	margin: 0 auto;
+}
+
+#page-wrapper {
+   min-height:100%;
+   position:relative;
+}
+
+#page-footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:250px;   /* Height of the footer */
+   
+   background-image: url('../img/footer_bg.png');
+   background-repeat: repeat-x;
+   background-position: bottom;
+}
+
+/* Phillip's Overrides */
+
+.nav-collapse {
+	margin: 50px 0 0 0;
+}
+
+li.active a {
+	background-color: transparent !important;
+	text-decoration: underline !important;
+}	
+
+/* Phillip's Custom */
+.banner {
+	background: transparent url('/img/1gooddeed.png') no-repeat center top;
+	height: 303px;
+	width: 154px; 
+	position: relative;
+	z-index: -1;
+	margin-top: -50px;
+	float: left;
+}
+
+.fb {
+	background: transparent url('/img/social.png') no-repeat center top;
+	background-position: -43px 0px;
+	width: 44px;
+	height: 44px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.twitter {
+	background: transparent url('/img/social.png') no-repeat center top;
+	background-position: 0px 0px;
+	width: 44px;
+	height: 44px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.clear {
+	clear: both !important;
+}
+
+#foottext {
+	text-align: center;
+	margin: 0 0 0 73px;
+	padding-top: 20px;
+}
+
+hr {
+	border-top: 1px solid #0096ff; 
+}
+
+/* Tables */
+
+table.table th {
+	background-color: #640663;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
