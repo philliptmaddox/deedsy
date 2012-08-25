@@ -80,7 +80,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<img src="/img/logo_animated.gif">
 					</a>
 				<div class="nav-collapse">
-                    	<div class="nav-links"><a href="/dashboard">Dashboard</a> | <a href="/users/edit">Profile</a><span style="float: right;"><a href="/users/logout">Logout</a></span></div>
+                    	<div class="nav-links"><a href="/dashboard">Dashboard</a> | <a href="/users/edit">Profile</a>
+                    	<a class="logout" href="/users/logout">Logout</a></span></div>
                     	<span id="welcome">
 	                    	<?php $input = array("Hello, ", "Sup, ", "What up,", "Yo,", "Howdy,");
 	                    		$rand_keys = array_rand($input, 2);
