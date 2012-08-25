@@ -26,8 +26,8 @@
 				    <tr>
 				        <th>Date Posted</th>
 				        <th>Deed Title</th>
-				        <th>Deed Creator</th>
-				        <th>Points Given</th>
+				        <th>Creator</th>
+				        <th>Points</th>
 				    </tr>
 				</thead>
 				<tbody>

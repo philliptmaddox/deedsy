@@ -38,6 +38,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->script('libs/jquery.colorbox-min.js');
 		echo $this->Html->script('jquery-ui-1.8.19.custom.min.js');	
 		echo $this->Html->script('cakebootstrap.js');
+		echo $this->Html->script('bootstrap-datepicker.js');
 
 		echo $this->Html->script('deedsy.core.js');
 
@@ -45,6 +46,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->css('deedsy.type');
 		echo $this->Html->css('deedsy.colorbox');
 		echo $this->Html->css('flick/jquery-ui-1.8.19.custom.css');
+		echo $this->Html->css('datepicker.css');
+		
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -73,7 +76,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<a href="/users/login" alt="log in"><img src="/img/login_button.png" alt="login button"/></a>
 					</div>
                     <?php } else { ?>
-                    <a class="brand" href="/dashboard">
+                    <a class="brand" href="/pages/home">
 					<img src="/img/logo_animated.gif">
 					</a>
 				<div class="nav-collapse">
