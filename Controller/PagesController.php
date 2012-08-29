@@ -85,6 +85,11 @@ class PagesController extends AppController {
 			$title_for_layout = Inflector::humanize($path[$count - 1]);
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
+        $this->set('deeds', $this->Deed->find('all', array(
+            'conditions' => array('Deed.status_id' => 1),
+            'order' => array('Deed.created DESC'),
+            'limit' => 5,
+        )));
 		$this->render(implode('/', $path));
 	}
 }
