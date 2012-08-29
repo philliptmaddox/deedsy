@@ -60,7 +60,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<div class="navbar-inner">
 			<div class="container">
                 	<?php if(!isset($user)){ ?>
-                	<a class="brand" href="/">
+                	<a class="brand" href="/pages/home">
 					<img src="/img/logo_animated.gif">
 					</a>
 				<div class="nav-collapse">
@@ -76,7 +76,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<a href="/users/login" alt="log in"><img src="/img/login_button.png" alt="login button"/></a>
 					</div>
                     <?php } else { ?>
-                    <a class="brand" href="/pages/home">
+                    <a class="brand" href="/dashboard">
 					<img src="/img/logo_animated.gif">
 					</a>
 				<div class="nav-collapse">
