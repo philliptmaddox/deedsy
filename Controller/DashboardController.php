@@ -1,6 +1,6 @@
 <?php
 class DashboardController extends AppController {
-	var $uses = array('User', 'Deed');
+	var $uses = array('User', 'Deed', 'Tag');
 	public $helpers = array('Html', 'Form');	
 	
 	public function beforeFilter() {
@@ -11,6 +11,7 @@ class DashboardController extends AppController {
 			$id = $this->Auth->user('id');
 			$this->User->id = $id;
 			$this->set('user', $this->User->read());
+			$this->set('tags', $this->Tag->find('all', array()));
 			
 			$unclaimedDeeds = $this->Deed->find('all', array(
 					'conditions' => array(

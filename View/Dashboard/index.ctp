@@ -137,6 +137,11 @@
 <div class="row">
 	<div class="span12">
 		<h2>Popular Tags</h2>
+			<div class="tags">
+				<?php foreach ($tags as $tag): ?> 
+					<strong><?php echo $tag ['Tag']['name']; ?></strong>
+				<?php endforeach; ?>
+			</div>
 	</div>
 </div>
 	
