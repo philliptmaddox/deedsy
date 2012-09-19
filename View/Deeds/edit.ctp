@@ -1,4 +1,7 @@
 <!-- File: /app/View/Users/add.ctp -->
+<?php
+  echo $this->Html->script('datepicker.js');
+?>
 <?php $this->Html->css('deedsy.forms', null, array('inline' => false));?>
 <?php 
 	$tags = $this->request->data['Tag'];
