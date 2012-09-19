@@ -7,8 +7,8 @@
 	});
 </script>
 <div class="well">
-	<h1>Create Your First Deed &amp; get +5 bonus Deedsy Points!</h1>
 	<?php echo $this->Html->link("+ Create Deed", array('controller' => 'deeds', 'action' => 'add'), array("class" => "btn btn-large btn-primary")) ?>
+	<div id="bonus"><h1>Create Your First Deed &amp; get +5 bonus Deedsy Points!</h1></div>
 	<img style="float: right; margin-top: -50px;" src="img/cat_plus_5.png"></img>
 </div>
 <h2>Most Recent Deeds in Need of a Do Gooder.</h2>

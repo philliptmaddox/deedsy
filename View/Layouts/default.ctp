@@ -113,7 +113,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<a href="https://de.twitter.com/#!/JoinDeedsy" target="_blank" alt="Deedsy on Twitter"><div class="twitter"></div></a>
 				<p>Follow Us On<br />Twitter &amp; Facebook</p>
 			</div>
-			<div id="foottext" class="span4">
+			<div id="foottext" class="span5">
+				<ul>
+					<a href="/what"><li>What is a good deed engine? | </li></a>
+					<a href="/faq"><li>FAQs | </li></a>
+					<a href="/about"><li>About | </li></a>
+					<a href="/contact"><li>Contact</li></a>
+				</ul>
 				<p>&copy; All Rights Reserved Deedsy</p>
 			</div>
 		</div> <!-- END ROW -->

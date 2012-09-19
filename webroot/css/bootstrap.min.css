@@ -691,3 +691,5 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 /* CUSTOM */
 
 a.logout:active, a.logout:hover, a.logout:visited, a.logout:link {float: right; color: #bb2448;}
+#bonus {display: inline-block; margin-left: 20px;}
+#foottext ul li {list-style: none; text-align: left; display: inline;}
