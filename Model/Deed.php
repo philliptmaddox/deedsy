@@ -1,5 +1,11 @@
 <?php
 class Deed extends AppModel {
+	// statuses
+	const UNASSIGNED = 1;
+	const ACCEPTED = 2;
+	const COMPLETED = 4;
+	const EXPIRED = 8;
+
 	var $name = 'Deed';
 	var $belongsTo = array(
 		'DeedCreator' => array(
@@ -23,6 +29,13 @@ class Deed extends AppModel {
                 'joinTable'              => 'deeds_tags',
                 'foreignKey'             => 'deed_id',
                 'associationForeignKey'  => 'tag_id'
+            ),
+        'UserOffers' =>
+            array(
+                'className'              => 'User',
+                'joinTable'              => 'deeds_users',
+                'foreignKey'             => 'deed_id',
+                'associationForeignKey'  => 'user_id'
             )
     );
 		
