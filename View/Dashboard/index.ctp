@@ -8,8 +8,19 @@
 </script>
 <div class="well">
 	<?php echo $this->Html->link("+ Create Deed", array('controller' => 'deeds', 'action' => 'add'), array("class" => "btn btn-large btn-primary")) ?>
-	<div id="bonus"><h1>Create Your First Deed &amp; get +5 bonus Deedsy Points!</h1></div>
-	<img style="float: right; margin-top: -50px;" src="img/cat_plus_5.png"></img>
+	<div id="bonus">
+	<?php if (count($createdDeeds) == 0):?>
+		<h1>Create Your First Deed &amp; get +5 bonus Deedsy Points!</h1>
+	</div>
+	<img style="float: right; margin-top: -50px;" src="img/cat_plus_5.png"></img>		
+	<?php else:?>
+		<h2>
+	    	<?php $input = array("Need a favor? Create a Deed and find help.", "We're not telling you what kind of deeds need doing. Just create some.", "s", "Yo,", "Howdy,");
+	    		$rand_keys = array_rand($input, 2);
+	    		echo $input[$rand_keys[0]] . "\n"; ?>
+        </h2>
+        </div>
+	<?php endif;?>
 </div>
 <h2>Most Recent Deeds in Need of a Do Gooder.</h2>
 <h4>Can You Do Good?</h4>
