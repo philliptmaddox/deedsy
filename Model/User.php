@@ -13,6 +13,16 @@ class User extends AppModel {
 		)
 	);
 	
+	public $hasAndBelongsToMany = array(
+        'DeedOffers' =>
+            array(
+                'className'              => 'Deed',
+                'joinTable'              => 'deeds_users',
+                'foreignKey'             => 'user_id',
+                'associationForeignKey'  => 'deed_id'
+            ),
+    );
+
 	public $validate = array(
 			'email' => array(
 				'required' => array(
