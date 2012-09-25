@@ -11,7 +11,7 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>Date Posted</th>
+					<th>Posted</th>
 					<th>Deed Title</th>
 					<th>Points Offered</th>
 				</tr>
@@ -19,7 +19,7 @@
 			<tbody>
 				<?php foreach ($deeds as $deed): ?>
 					<tr>
-						<td><h5><?php echo date('m-d-y', strtotime($deed['Deed']['created'])); ?></h5</td>
+						<td><h5><?php echo date('m/d/y', strtotime($deed['Deed']['created'])); ?></h5</td>
 						<td><h5><?php echo $this->Html->link($deed['Deed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?></h5></td>
 						<td><h5><?php echo $deed['Deed']['value']; ?> pts</h5</td>
 					</tr>	

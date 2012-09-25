@@ -15,9 +15,9 @@
 	<img style="float: right; margin-top: -50px;" src="img/cat_plus_5.png"></img>		
 	<?php else:?>
 		<h2>
-	    	<?php $input = array("Need a favor? Create a Deed and find help.", "We're not telling you what kind of deeds need doing. Just create some.", "s", "Yo,", "Howdy,");
-	    		$rand_keys = array_rand($input, 2);
-	    		echo $input[$rand_keys[0]] . "\n"; ?>
+	    	<?php $input = array("Need a favor? Create a Deed and find help.", "We're not telling you what kind of deeds need doing. Just create some.", "If you need it, Deedsy's got it. Create a Deed!", "Did You Know: The most borrowed item is a book.");
+	    		$rand_keys = array_rand($input);
+	    		echo $input[$rand_keys] . "\n"; ?>
         </h2>
         </div>
 	<?php endif;?>
