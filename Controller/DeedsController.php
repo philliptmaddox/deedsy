@@ -60,9 +60,7 @@ class DeedsController extends AppController {
 				    $this->Session->setFlash('+5 points for posting your first deed.', 'default', array());
 					$this->User->read();
 					
-					$balance = $this->User->field('balance');
-					$this->User->set('balance', ($balance + 5));
-					$this->User->save();
+					$this->User->addPoints(5);
 				} else {
 				    $this->Session->setFlash('Deed has been created.', 'review_deed', array('deed' => $this->Deed->read()));
 				}
@@ -222,14 +220,7 @@ class DeedsController extends AppController {
 		$this->User->id = $user_id;
 		$this->User->read();
 		
-		$balance = $this->User->field('balance');
-		
-		if($balance > $number){
-			$this->User->set('balance', ($balance + $number));
-			if(!$this->User->save()){
-				$success = false;
-			}
-		}
+		$success = $this->User->addPoints($numbers);
 		
 		return $success;
 	}
