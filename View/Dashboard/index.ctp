@@ -171,9 +171,13 @@
 	<div class="span12">
 		<h2>Popular Tags</h2>
 			<div class="tags">
-				<?php foreach ($tags as $tag): ?> 
-					<strong><?php echo $tag ['Tag']['name']; ?></strong>
-				<?php endforeach; ?>
+				<?php for ($i=0;$i < count($tags);$i++): ?> 
+					<?php if ($i < count ($tags) - 1): ?>
+						<strong><?php echo $tags [$i] ['Tag']['name']; ?>,</strong>
+					<?php  else: ?>
+						<strong><?php echo $tags [$i] ['Tag']['name']; ?></strong>
+					<?php  endif; ?>		
+				<?php endfor; ?>
 			</div>
 	</div>
 </div>
