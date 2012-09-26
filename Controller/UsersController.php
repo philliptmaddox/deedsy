@@ -33,8 +33,8 @@ class UsersController extends AppController {
 	
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->request->data['User']['balance'] = 25;
 			if ($this->User->save($this->request->data)) {
+					$this->User->addPoints(25);
                 $this->Session->setFlash('User has been created.');
                 $this->Alerts->sendWelcomeEmail($this->User->field('email'), $this->User->field('first_name'));
                 $this->redirect(array('controller' => 'dashboard' , 'action' => 'index'));
