@@ -693,3 +693,5 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 a.logout:active, a.logout:hover, a.logout:visited, a.logout:link {float: right; color: #bb2448;}
 #bonus {display: inline-block; margin-left: 20px;}
 #foottext ul li {list-style: none; text-align: left; display: inline;}
+.social a:hover .fb {background: transparent url('/img/social.png') no-repeat center top; background-position: -43px -44px;}
+.social a:hover .twitter {background: transparent url('/img/social.png') no-repeat center top; background-position: 0 -44px;}

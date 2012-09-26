@@ -22,14 +22,36 @@
         </div>
 	<?php endif;?>
 </div>
-<h2>Most Recent Deeds in Need of a Do Gooder.</h2>
-<h4>Can You Do Good?</h4>
+<script>
+	$(function(){
+		$('.deedtab').click(function(){
+			var id=$(this).attr("id");
+			var h2text;
+			var h4text;
+			if (id=="everyonetab"){
+				h2text="Most Recent Deeds in Need of a Do Gooder.";
+				h4text="Can You Do Good?";
+			}else if(id=="acceptedtab"){
+				h2text="Deeds You’ve Agreed to Do.";
+				h4text="Look how nice you are! A saint maybe?";
+				
+			}else if(id=="createdtab"){
+				h2text="Deeds You’ve Created.";
+				h4text="That’s a lot of love being thrown your way!";
+			}
+			$('#everyoneh2').text(h2text);
+			$('#everyoneh4').text(h4text);
+		});
+	});
+</script>
+<h2 id="everyoneh2">Most Recent Deeds in Need of a Do Gooder.</h2>
+<h4 id="everyoneh4">Can You Do Good?</h4>
 <div class="row">
 	<div class="span9" id="tabs">
 		<ul>
-			<li><a href="#everyone"><h3>Everyone's Deeds</h3></a></li>
-			<li><a href="#accepted"><h3>Accepted Deeds</h3></a></li>
-			<li><a href="#created"><h3>Created Deeds</h3></a></li>
+			<li><a id="everyonetab" class="deedtab" href="#everyone"><h3>Everyone's Deeds</h3></a></li>
+			<li><a id="acceptedtab" class="deedtab" href="#accepted"><h3>Accepted Deeds</h3></a></li>
+			<li><a id="createdtab" class="deedtab" href="#created"><h3>Created Deeds</h3></a></li>
 		</ul>
 		<div id="everyone">
 			<table class="table table-striped">
