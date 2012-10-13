@@ -695,3 +695,8 @@ a.logout:active, a.logout:hover, a.logout:visited, a.logout:link {float: right; 
 #foottext ul li {list-style: none; text-align: left; display: inline;}
 .social a:hover .fb {background: transparent url('/img/social.png') no-repeat center top; background-position: -43px -44px;}
 .social a:hover .twitter {background: transparent url('/img/social.png') no-repeat center top; background-position: 0 -44px;}
+
+
+/* Facebook Login */
+.fb_iframe_widget {margin-top: 4%;}
+.users-add-shift {margin-left: 43%; margin-top: 0px;}

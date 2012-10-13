@@ -1,6 +1,28 @@
 <!-- File: /app/View/Users/add.ctp -->
 <?php $this->Html->css('deedsy.forms', null, array('inline' => false));?>
 
+ <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '336387023123874', // App ID
+            channelUrl : '//WWW.deedsy.com/channel.html', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+          });
+          // Additional initialization code here
+        };
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
+      </script>
+
 <div class="row span12">
 	<img src="/img/join_dude.jpg" alt="Join Deedsy Dude" style="float:left;"/>
     <div class="span3" style="float:right;">
@@ -18,6 +40,7 @@
 	    echo $this->Form->end();
         ?>
         </fieldset>
+        <div class="fb-login-button users-add-shift">Login with Facebook</div>
         </div>
 	</div>
 </div>

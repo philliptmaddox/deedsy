@@ -74,6 +74,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						<span style="font: 700 14px "Open Sans Condensed", Helvetica, sans-serif;"><img src="/img/downarrow.png"/>&nbsp;&nbsp;Existing Do Gooders</span>
 						<br />
 						<a href="/users/login" alt="log in"><img src="/img/login_button.png" alt="login button"/></a>
+						<div class="fb-login-button">Login with Facebook</div>
 					</div>
                     <?php } else { ?>
                     <a class="brand" href="/dashboard">
