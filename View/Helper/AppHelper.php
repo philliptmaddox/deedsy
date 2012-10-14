@@ -32,3 +32,6 @@ App::uses('Helper', 'View');
  */
 class AppHelper extends Helper {
 }
+
+class niceShortHelper extends AppHelper {
+}

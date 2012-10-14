@@ -1,7 +1,7 @@
 <?php
 class DashboardController extends AppController {
 	var $uses = array('User', 'Deed', 'Tag');
-	public $helpers = array('Html', 'Form');	
+	public $helpers = array('Html', 'Form', 'Time');	
 	
 	public function beforeFilter() {
 	}

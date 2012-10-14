@@ -59,7 +59,7 @@ class User extends AppModel {
 		$balance = $this->data[$this->alias]['balance'];
 		$this->data[$this->alias]['balance'] = $balance + $points;
 		if ($points > 0) {
-			$earned = $this->data[$this->alias]['earned'];
+			/* $earned = $this->data[$this->alias]['earned']; */
 			$this->data[$this->alias]['earned'] = $earned + $points;
 		}
 		return $this->save();

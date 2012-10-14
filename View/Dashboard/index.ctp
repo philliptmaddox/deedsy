@@ -66,7 +66,7 @@
 				<tbody>
 				    <?php foreach ($unclaimedDeeds as $deed): ?>
 					    <tr>
-					        <td><?php echo $deed['Deed']['created']; ?></td>
+					        <td><?php echo $this->Time->niceShort ($deed['Deed']['created']); ?></td>
 					        <td><?php echo $this->Html->link($deed['Deed']['name'], array('controller' => 'deeds', 'action' => 'view', $deed['Deed']['id'])); ?></td>
 					         <td><?php echo $deed['DeedCreator']['first_name'] .' '.$deed['DeedCreator']['last_name']; ?></td>
 					         <td><?php echo $deed['Deed']['value']; ?></td>
