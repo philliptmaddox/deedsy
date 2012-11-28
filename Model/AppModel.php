@@ -31,4 +31,19 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+	function getChanged() {
+		$this->recursive = -1;
+		$old = $this->findById($this->id);
+		$changed_fields = array();
+		if ($old){
+			foreach ($this->data[$this->alias] as $key =>$value) {
+				if ($old[$this->alias][$key] != $value) {
+					$changed_fields[] = $key;
+				}
+			}
+		} else { // model doesn't exist - all fields are 'changed'
+			$changed_fields = array_keys($this->data[$this->alias]);
+		}
+		return $changed_fields;
+	}
 }

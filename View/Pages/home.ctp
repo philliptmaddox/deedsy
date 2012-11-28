@@ -50,5 +50,22 @@
 		</table>
 		<img src="/img/dogood-ribbon.png" alt="Do Some Good &amp; Pay it Forward"/>
 		<a href="/users/add"><img style="margin: 0 50% 0 24%;" src="/img/joinnow.png" alt="Join Deedsy!"/></a>
+		<h2>Top Do Gooders.</h2>
+		<table width="100%" class="table-striped table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>Do Gooder</th>
+					<th>Points Earned</th>
+				</tr>
+			</thead>
+			<tbody>
+                  <?php foreach ($doGooders as $doGooder): ?>
+		    <tr>
+		      <td><?php echo $doGooder['User']['first_name'] . ' ' . $doGooder['User']['last_name'] ?></td>
+		      <td><b><?php echo $doGooder['User']['earned'] ?></b></td>
+		    </tr>
+                  <?php endforeach; ?>
+		  </tbody>
+		</table>
 	</div>
 </div>

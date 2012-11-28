@@ -3,9 +3,6 @@ class DashboardController extends AppController {
 	var $uses = array('User', 'Deed', 'Tag');
 	public $helpers = array('Html', 'Form', 'Time');	
 	
-	public function beforeFilter() {
-	}
-	
 	public function index() {
 		if ($this->Auth->user('id') != null) {
 			$id = $this->Auth->user('id');
@@ -39,6 +36,10 @@ class DashboardController extends AppController {
 			);
 			
 			$this->set('claimedDeeds', $claimedDeeds);
+			$this->set('doGooders', $this->User->find('all', array(
+				'order' => array('User.earned DESC'),
+				'limit' => 5,
+			)));
 		} else {
 			$this->redirect(array('controller' => 'users','action' => 'login'));
 		}

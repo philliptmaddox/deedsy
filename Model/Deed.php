@@ -60,6 +60,12 @@ class Deed extends AppModel {
 		)
 	);
 	
+	public function beforeSave($options = Array()) {
+		if (empty($this->data[$this->alias]['expires'])) {
+			$this->data[$this->alias]['expires'] = strtotime("+30 days");
+		}
+		return true;
+	}
 	public function isOwnedBy($deed, $user) {
 		return $this->field('id', array('id' => $deed, 'creator_user_id' => $user)) === $deed;
 	}
