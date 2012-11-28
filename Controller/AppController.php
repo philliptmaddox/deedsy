@@ -48,7 +48,8 @@ class AppController extends Controller {
 	
 	public function beforeFilter() {
 		$this->Auth->allow('index', 'view', 'display');
-		if($this->Auth->loggedIn() && isset($this->User)){
+		if($this->Auth->loggedIn()){
+			$this->loadModel('User');
 			//debug($this->Auth->user('id'), true);
 			$this->User->id = $this->Auth->user('id');
 			$this->set('user', $this->User->read());
