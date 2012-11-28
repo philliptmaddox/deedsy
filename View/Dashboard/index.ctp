@@ -142,27 +142,19 @@
 	<div class="span2">
 		<h2>Top Do Gooders.</h2>
 		<table width="100%" class="table-striped table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>Do Gooder</th>
+					<th>Points Earned</th>
+				</tr>
+			</thead>
 		  <tbody>
+                  <?php foreach ($doGooders as $doGooder): ?>
 		    <tr>
-		      <td>Ben Stucki</td>
-		      <td><b>45</b></td>
+		      <td><?php echo $doGooder['User']['first_name'] . ' ' . $doGooder['User']['last_name'] ?></td>
+		      <td><b><?php echo $doGooder['User']['earned'] ?></b></td>
 		    </tr>
-		    <tr>
-		      <td>Ben Stucki</td>
-		      <td><b>45</b></td>
-		    </tr>
-		    <tr>
-		      <td>Ben Stucki</td>
-		      <td><b>45</b></td>
-		    </tr>
-		    <tr>
-		      <td>Ben Stucki</td>
-		      <td><b>45</b></td>
-		    </tr>
-		    <tr>
-		      <td>Ben Stucki</td>
-		      <td><b>45</b></td>
-		    </tr>
+                  <?php endforeach; ?>
 		  </tbody>
 		</table>
 	</div>

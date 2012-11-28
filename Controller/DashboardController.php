@@ -36,6 +36,10 @@ class DashboardController extends AppController {
 			);
 			
 			$this->set('claimedDeeds', $claimedDeeds);
+			$this->set('doGooders', $this->User->find('all', array(
+				'order' => array('User.earned DESC'),
+				'limit' => 5,
+			)));
 		} else {
 			$this->redirect(array('controller' => 'users','action' => 'login'));
 		}
