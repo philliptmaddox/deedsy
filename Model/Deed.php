@@ -5,7 +5,7 @@ class Deed extends AppModel {
 	const ACCEPTED = 2;
 	const COMPLETED = 4;
 	const EXPIRED = 8;
-
+		
 	var $name = 'Deed';
 	var $belongsTo = array(
 		'DeedCreator' => array(
