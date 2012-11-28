@@ -50,7 +50,19 @@ class User extends AppModel {
 		)
 	);
 	public function beforeSave($options = Array()) {
-		if (isset($this->data[$this->alias]['password'])) {
+		$this->recursive = -1;
+		$old = $this->findById($this->id);
+		$changed_fields = array();
+		if ($old){
+			foreach ($this->data[$this->alias] as $key =>$value) {
+				if ($old[$this->alias][$key] != $value) {
+					$changed_fields[] = $key;
+				}
+			}
+		} else { // model doesn't exist - all fields are 'changed'
+			$changed_fields = array_keys($this->data[$this->alias]);
+		}
+		if (in_array('password', $changed_fields)) {
 			$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
 		}
 		return true;
