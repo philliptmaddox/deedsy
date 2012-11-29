@@ -89,7 +89,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	                    		echo $input[$rand_keys[0]] . "\n"; ?>
 	                    		<?=$user['User']['first_name']?>!
                     	</span>
-                    	<span class="h-label">Your Do Gooder Level: <span class="label-number"><?=$user['User']['level']?></span></span>
+                    	<span class="h-label">Your Rank: <span class="label-number"><?=$user['User']['level']?></span></span>
                     	<span class="h-label">Deedsy Points: <span class="label-number"><?=$user['User']['balance']?></span></span>
                     <?php } ?>
 				</div>

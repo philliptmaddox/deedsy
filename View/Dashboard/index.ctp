@@ -146,6 +146,7 @@
 				<tr>
 					<th>Do Gooder</th>
 					<th>Points Earned</th>
+					<th>Rank</th>
 				</tr>
 			</thead>
 		  <tbody>
@@ -153,6 +154,7 @@
 		    <tr>
 		      <td><?php echo $doGooder['User']['first_name'] . ' ' . $doGooder['User']['last_name'] ?></td>
 		      <td><b><?php echo $doGooder['User']['earned'] ?></b></td>
+		      <td><b><?php echo $doGooder['User']['level'] ?></b></td>
 		    </tr>
                   <?php endforeach; ?>
 		  </tbody>
