@@ -6,29 +6,7 @@
 	</div>
 </div>
 <style type="text/css">
-	.deedDescription {
-		border: 1px solid #d1d1d1;
-		box-shadow: 3px;
-		min-height: 175px;
-	}
-	.deedDescription h2 {
-		background-color: #640663;
-		color: #FFFFFF;
-		padding: 20px;
-	}
-	.deedDescription p {
-		padding: 20px;
-	}
-	.deedValue {
-		font: 700 35px "Open Sans Condensed", Helvetica, sans-serif;
-		float: right;
-		width: 100px;
-		color: #EDBA08;
-		background: transparent url(/img/halo1.png) no-repeat 15px 33px;
-		padding-bottom: 30px;
-		text-align: center;
-		margin-right: 12px;
-	}
+	
 </style>
 
 <div class="row">
