@@ -158,10 +158,20 @@ class DeedsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->User->id = $this->Auth->user('id');
 			$this->Deed->id = $id;
-			$this->Deed->set('actor_user_id', $this->User->id);
-			$this->Deed->set('status_id', 2);
-			$this->Deed->save();
-			$this->redirect(array('controller' => 'dashboard', 'action' => 'index'));
+			$deed = $this->Deed->read();
+			if ($this->User->id == $deed['Deed']['creator_user_id']) {
+				$this->Session->setFlash('You cannot accept your own Deed.');
+				$this->redirect(array('controller' => 'deeds', 'action' => 'view', 'id' => $id));
+			} elseif ($deed['Deed']['actor_user_id']) {
+				$this->Session->setFlash('This Deed has already been accepted.');
+				$this->redirect(array('controller' => 'deeds', 'action' => 'view', 'id' => $id));
+			} else {
+				$this->Deed->set('actor_user_id', $this->User->id);
+				$this->Deed->set('status_id', 2);
+				$this->Deed->save();
+				$this->Session->setFlash('You have accepted the Deed.');
+				$this->redirect(array('controller' => 'dashboard', 'action' => 'index'));
+			}
 		}
 	}
 	
