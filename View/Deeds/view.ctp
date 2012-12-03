@@ -1,7 +1,7 @@
 <!-- File: /app/View/Deeds/review.ctp -->
 <div class="row">
 	<div class="well span 12">
-		<h1>Help, <?=$deed['DeedCreator']['first_name']?> with his deed!</h1>
+		<h1>Help with <?=$deed['DeedCreator']['first_name']?>'s deed!</h1>
 		<p>Your Friend, <?=$deed['DeedCreator']['first_name']?> needs a favor. Around here we call it a deed. Deedsy is a good deed engine. Earn points for doing good deeds. You can start here by accepting <?=$deed['DeedCreator']['first_name']?>'s deed!</p>
 	</div>
 </div>
