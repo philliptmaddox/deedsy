@@ -24,7 +24,7 @@ a{color:#0088cc;text-decoration:none;}
 a:hover{color:#005580;text-decoration:underline;}
 .row{margin-left:-20px;*zoom:1;}.row:before,.row:after{display:table;content:"";}
 .row:after{clear:both;}
-[class*="span"]{float:left;margin-left:20px;}
+[class*="span"]{float:left;margin-left:15px;}
 .container,.navbar-fixed-top .container,.navbar-fixed-bottom .container{width:940px;}
 .span12{width:940px;}
 .span11{width:860px;}
@@ -695,6 +695,7 @@ a.logout:active, a.logout:hover, a.logout:visited, a.logout:link {float: right; 
 #foottext ul li {list-style: none; text-align: left; display: inline;}
 .social a:hover .fb {background: transparent url('/img/social.png') no-repeat center top; background-position: -43px -44px;}
 .social a:hover .twitter {background: transparent url('/img/social.png') no-repeat center top; background-position: 0 -44px;}
+#everyone tbody { width: 100%; }
 
 
 /* Facebook Login */

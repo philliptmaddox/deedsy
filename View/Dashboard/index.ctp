@@ -140,7 +140,7 @@
 				</table>
 			</div>	
 		</div> <!-- END #tabs -->
-		<div class="span2">
+		<div class="span3">
 			<h2>Top Do Gooders.</h2>
 			<table width="100%" class="table-striped table-condensed table-bordered">
 				<thead>
@@ -162,19 +162,19 @@
 			</table>
 		</div>
 	</div> <!-- END .row -->	
-</div> <!-- END .container -->
-<div class="row">
-	<div class="span12">
-		<h2>Popular Tags</h2>
-			<div class="tags">
-				<?php for ($i=0;$i < count($tags);$i++): ?> 
-					<?php if ($i < count ($tags) - 1): ?>
-						<strong><?php echo $tags [$i] ['Tag']['name']; ?>,</strong>
-					<?php  else: ?>
-						<strong><?php echo $tags [$i] ['Tag']['name']; ?></strong>
-					<?php  endif; ?>		
-				<?php endfor; ?>
-			</div>
+	<div class="row">
+		<div class="span12">
+			<h2>Popular Tags</h2>
+				<div class="tags">
+					<?php for ($i=0;$i < count($tags);$i++): ?> 
+						<?php if ($i < count ($tags) - 1): ?>
+							<strong><?php echo $tags [$i] ['Tag']['name']; ?>,</strong>
+						<?php  else: ?>
+							<strong><?php echo $tags [$i] ['Tag']['name']; ?></strong>
+						<?php  endif; ?>		
+					<?php endfor; ?>
+				</div>
+		</div>
 	</div>
-</div>
+</div> <!-- END .container -->
 	
