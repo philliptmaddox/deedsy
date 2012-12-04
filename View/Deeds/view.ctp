@@ -6,7 +6,7 @@
 			<!-- <div class="fb-like" data-send="true" data-width="940" data-show-faces="true" data-font="verdana"></div> -->
 			<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdeedsy.com&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;font=verdana&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:940px; height:40px;" allowTransparency="true"></iframe>
 	<!-- End Facebook Like -->
-	<div class="well span 12">
+	<div class="well span12">
 		<h1>Help with <?=$deed['DeedCreator']['first_name']?>'s deed!</h1>
 		<p>Your Friend, <?=$deed['DeedCreator']['first_name']?> needs a favor. Around here we call it a deed. Deedsy is a good deed engine. Earn points for doing good deeds. You can start here by accepting <?=$deed['DeedCreator']['first_name']?>'s deed!</p>
 	</div>
@@ -38,7 +38,8 @@
     	</div>
 	<!--     	<img style="float: right; margin-top: -100px; z-index: 100; position: relative;" src="/img/large_kitty_noring.png" alt="huge kitty"/> -->
 	<?php else: ?>
-	    <?php echo $this->Html->link('edit', array('controller' => 'deeds', 'action' => 'edit', $deed['Deed']['id'])); ?>
+	    <?php echo $this->Html->link('Edit', array('controller' => 'deeds', 'action' => 'edit', $deed['Deed']['id'])); ?> | 
+	    <?php echo $this->Form->postLink('Delete', array('controller' => 'deeds', 'action' => 'delete', $deed['Deed']['id']), array('confirm' => 'are you sure?')); ?>
         <?php endif; ?>
         
     <!-- FB Share -->
