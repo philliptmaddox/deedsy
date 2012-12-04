@@ -53,8 +53,30 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	<!-- These are Open Graph Tags used to describe the Deedsy website -->
+		<meta property="og:title" content="Deedsy Deed" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://deedsy:8888/deeds/view/15" />
+		<meta property="og:image" content="https://launchrock-assets.s3.amazonaws.com/logo-files/QW9VBgK2jhlE7Kc.jpg" />
+		<meta property="og:site_name" content="Deedsy" />
+		<meta property="fb:admins" content="1024751622" />
+	<!-- End Open Graph tags -->
+
+
 </head>
 <body>
+	<!-- For Facebook Like & Send -->
+<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- End Facebook Like & Send -->
+
+<div id="fb-root"></div>
 	<div id="page-wrapper">
 	<div class="navbar">
 		<div class="navbar-inner">
