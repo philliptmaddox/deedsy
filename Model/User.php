@@ -24,26 +24,30 @@ class User extends AppModel {
     );
 
 	public $validate = array(
-			'email' => array(
-				'required' => array(
+		'email' => array(
+			'unique' => array(
+				'rule' => 'isUnique',
+				'message' => 'That email address is already being used'
+			),
+			'required' => array(
 				'rule' => array('notEmpty'),
 				'message' => 'An email address is required'
 			)
 		),
 		'first_name' => array(
-				'required' => array(
+			'required' => array(
 				'rule' => array('notEmpty'),
 				'message' => 'A first name is required'
 			)		
 		),
 		'last_name' => array(
-				'required' => array(
+			'required' => array(
 				'rule' => array('notEmpty'),
 				'message' => 'A last name is required'
 			)		
 		),
 		'password' => array(
-				'required' => array(
+			'required' => array(
 				'rule' => array('notEmpty'),
 				'message' => 'A password is required'
 			)		
