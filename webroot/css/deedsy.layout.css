@@ -146,6 +146,7 @@ hr {
 table.table th {
 	background-color: #640663;
 	color: #fff;
+	border-right: 1px solid #fff;
 }
 
 
