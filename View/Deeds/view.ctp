@@ -23,6 +23,7 @@
 	    	+<?=$deed['Deed']['value']?>
     	</div>
     	<p><?=$deed['Deed']['description']?></p>
+    	<p>Expires on <span><?=$deed['Deed']['expires']?></span></p>
     </div>
     <div class="span4">
 	<?php if (!isset($user) || $deed['Deed']['creator_user_id'] != $user['User']['id']) : ?>
